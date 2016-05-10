@@ -5,3 +5,4 @@ Sphere2 development starts from Sphere1 freez version which was last modified on
 
 Compilation of the Sphere2 is easier. Installation elswhere is now simplified.
 
+To compile create setup.sh and Makefile based on examples that are included for psec and UCLA machines.
