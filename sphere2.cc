@@ -73,7 +73,7 @@ int main(int argc,char** argv)
   TFile* f;
   //f = TFile::Open("sph_out_bkgC10_rndVtx_3p0mSphere_1.root", "recreate");
 //  f = TFile::Open("sph_out_promptC10_2p529MeV_center_5.root", "recreate");
-  f = TFile::Open("sph_out_1pos_0p1MeV_center_100.root", "recreate");
+  f = TFile::Open("sph_out_1pos_0p79MeV_center_100_check.root", "recreate");
   //f = TFile::Open("sph_out_topology90_100MeV_center_3.root", "recreate");
 
   TTree* epgTree = new TTree("epgTree", "epgTree");

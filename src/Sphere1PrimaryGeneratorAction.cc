@@ -80,7 +80,7 @@ Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv)
 //  fParticleGun->SetParticleEnergy(2.529*MeV);
 //  fParticleGun->SetParticleEnergy((2.529-0.511*2-0.718)*MeV);
 //  fParticleGun->SetParticleEnergy(0.718*MeV);
-  fParticleGun->SetParticleEnergy(0.1*MeV);
+  fParticleGun->SetParticleEnergy(0.79*MeV);
   
   //fParticleGun->SetParticleEnergy(3.03798*1e-06*MeV); //optical photon energy @ 392.6nm: 3.1579*1e-06*MeV
   
