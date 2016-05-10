@@ -1,0 +1,38 @@
+# Macro file number 1 for the Sphere1 simulation
+# 
+# Can be run in batch, without graphic
+# or interactively: Idle> /control/execute run1.mac
+#
+/control/verbose 0
+#
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+# 
+# gamma 6 MeV to the direction (0.,0.,1.)
+#
+
+#step size etc. 
+#/run/setCut 0.1 mm
+#/process/eLoss/StepFunction 0.2 1.0mm
+
+#switch off Cerenkov light
+#/process/inactivate Cerenkov
+
+#omit next two lines if HEPevt is used instead of particle gun
+#/gun/particle opticalphoton
+#/gun/energy 4.132666666667*1e-06 MeV
+#/gun/energy 3.0995*1e-06 MeV
+#/gun/energy 2.4796*1e-06 MeV
+#/gun/energy 2.066333333333*1e-06 MeV
+#/gun/energy 1.771142857143*1e-06 MeV
+#/gun/energy 1.54975*1e-06 MeV
+
+#
+/run/beamOn 100
+# 
+
+
+
+
+## proton 210 MeV to the direction (0.,0.,1.)

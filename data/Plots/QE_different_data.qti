@@ -1,0 +1,386 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	6
+<table>
+QE_PMT_DC	48	2	11 Jan 2013 13:58:56
+geometry	445	107	445	220	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	/home/christoph/geant4/MyG4_applications/Sphere1-build/data/QE_PMT_DC.txt	2
+<data>
+0	200	0
+1	260	0
+2	270	0
+3	280	0.0004
+4	290	0.0036
+5	300	0.0255
+6	310	0.073
+7	320	0.1294
+8	330	0.1784
+9	340	0.2062
+10	350	0.2253
+11	360	0.2336
+12	370	0.2392
+13	380	0.2408
+14	390	0.2453
+15	400	0.2456
+16	410	0.2454
+17	420	0.2442
+18	430	0.2352
+19	440	0.2274
+20	450	0.2199
+21	460	0.2092
+22	470	0.1946
+23	480	0.1822
+24	490	0.1727
+25	500	0.1647
+26	510	0.1544
+27	520	0.1344
+28	530	0.1083
+29	540	0.0875
+30	550	0.0736
+31	560	0.0637
+32	570	0.0551
+33	580	0.0467
+34	590	0.0383
+35	600	0.0306
+36	610	0.0234
+37	620	0.0169
+38	630	0.0101
+39	640	0.0069
+40	650	0.0044
+41	660	0.0025
+42	670	0.0014
+43	680	0.0007
+44	690	0.0003
+45	700	0.0001
+46	710	0
+47	800	0
+</data>
+</table>
+<table>
+Ham_QuantumEffic	26	2	11 Jan 2013 14:07:50
+geometry	67	273	445	220	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+<col nr="1">
+col("2")*0.01
+</col>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	/home/christoph/geant4/MyG4_applications/Sphere1-build/data/Ham_QuantumEffic.txt	2
+<data>
+0	301.79	0.0165608
+1	301.925	0.0244006
+2	302.205	0.0541924
+3	305.574	0.0816954
+4	318.621	0.12319
+5	344.508	0.154849
+6	380.016	0.165978
+7	425.138	0.148287
+8	473.478	0.129508
+9	502.43	0.103192
+10	541.077	0.0860824
+11	576.465	0.0655451
+12	608.596	0.0455535
+13	637.524	0.0338975
+14	669.655	0.0235586
+15	695.342	0.0167476
+16	708.157	0.0130377
+17	730.619	0.00926751
+18	749.846	0.00643851
+19	765.855	0.00457582
+20	785.082	0.003179
+21	797.834	0.00206219
+22	807.384	0.00143229
+23	820.128	0.000908176
+24	829.621	0.00053773
+25	832.68	0.000333182
+</data>
+</table>
+<table>
+JanetDig_QuantumEff	12	2	11 Jan 2013 14:10:02
+geometry	-43	324	445	220	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+<col nr="1">
+col("2")*0.01
+</col>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	/home/christoph/geant4/MyG4_applications/Sphere1-build/data/JanetDig_QuantumEff.txt	2
+<data>
+0	321.437	0.1468926278
+1	333.666	0.1794733627
+2	353.538	0.2142890601
+3	370.353	0.2365919697
+4	417.74	0.2365919697
+5	440.67	0.2254239212
+6	483.472	0.1625548756
+7	504.872	0.1468926278
+8	520.159	0.1233104833
+9	535.445	0.09120108394
+10	566.018	0.04864072057
+11	599.648	0.02471724145
+</data>
+</table>
+<table>
+Digitization_R3809U-63	48	2	3 Jun 2013 09:19:18
+geometry	921	77	445	220	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+<col nr="1">
+col("2")*0.01
+</col>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	250.8	0.001
+1	254.8	0.002
+2	257.5	0.003
+3	258.8	0.004
+4	260.2	0.005
+5	260.7	0.006
+6	261.5	0.007
+7	264.2	0.008
+8	265.5	0.009
+9	266.9	0.01
+10	273.6	0.02
+11	278.9	0.03
+12	282.9	0.04
+13	288.3	0.05
+14	291	0.06
+15	296.3	0.07
+16	301.7	0.08
+17	305.7	0.09
+18	311	0.1
+19	327.1	0.135
+20	348.5	0.173
+21	363.9	0.2
+22	400	0.27
+23	443.5	0.324
+24	474.2	0.354
+25	500	0.362
+26	530.7	0.357
+27	573.5	0.339
+28	612	0.3
+29	639.3	0.267
+30	676.8	0.214
+31	695	0.2
+32	718	0.171
+33	737.8	0.121
+34	745.8	0.1
+35	751.2	0.09
+36	753.8	0.08
+37	757.8	0.07
+38	760.5	0.06
+39	763.2	0.05
+40	767.2	0.04
+41	771.2	0.03
+42	776.8	0.02
+43	784.6	0.01
+44	785.9	0.009
+45	786.5	0.008
+46	800	0.002
+47	807.3	0.001
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	11 Jan 2013 13:59:07
+geometry	330	31	689	525	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	671	462
+<PageGeometry>0.00734214	0.0104822	0.985316	0.968553</PageGeometry>
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	1	0	1	0	#808080	1	0.5	#a0a0a4	2	0.4	#808080	1	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	wavelength [nm]	QE		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	5124	4	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans	15	75	0	0	0
+ScaleFont0	Bitstream Charter	16	75	0	0	0
+ScaleFont1	Sans	12	75	0	0	0
+ScaleFont2	Bitstream Charter	16	75	0	0	0
+ScaleFont3	Sans	12	75	0	0	0
+AxisFont0	Bitstream Charter	14	75	0	0	0
+AxisFont1	Sans	12	50	0	0	0
+AxisFont2	Bitstream Charter	14	75	0	0	0
+AxisFont3	Sans	12	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#2c2c2c	#2c2c2c	#2c2c2c	#2c2c2c
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	QE_PMT_DC_1	QE_PMT_DC_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	47	1
+curve	JanetDig_QuantumEff_1	JanetDig_QuantumEff_2	1	0	#00ff00	0	1	7	1	#0000ff	#0000ff	0	#000000	14	1	2	0	0	11	1
+scale	0	-0.05	0.25	0	7	5	0	0
+scale	1	-0.05	0.25	0	7	5	0	0
+scale	2	100	900	0	9	5	0	0
+scale	3	100	900	0	9	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	3	3	3	3
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>530.87971274686</x>
+<y>0.21850828729282</y>
+<right>251.859099804305</right>
+<bottom>0.218421052631579</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1) from DC MC
+\l(2) KamLAND PMT
+</Text>
+<Font>Sans	16	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>255</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+DC_KamLAND_R3809U-63	1	1	3 Jun 2013 09:20:02
+geometry	212	0	873	597	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	853	534
+<PageGeometry>0.00578035	0.00910747	0.986127	0.972678</PageGeometry>
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	1	0	1	0	#808080	1	0.5	#a0a0a4	2	0.4	#808080	1	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	wavelength [nm]	QE		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	5124	4	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans	17	75	0	0	0
+ScaleFont0	Bitstream Charter	18	75	0	0	0
+ScaleFont1	Sans	14	75	0	0	0
+ScaleFont2	Bitstream Charter	18	75	0	0	0
+ScaleFont3	Sans	14	75	0	0	0
+AxisFont0	Bitstream Charter	16	75	0	0	0
+AxisFont1	Sans	14	50	0	0	0
+AxisFont2	Bitstream Charter	16	75	0	0	0
+AxisFont3	Sans	14	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#2c2c2c	#2c2c2c	#2c2c2c	#2c2c2c
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Digitization_R3809U-63_1	Digitization_R3809U-63_2	2	1	#0000ff	0	1	7	1	#0000ff	#0000ff	0	#000000	14	1	2	0	0	47	1
+curve	QE_PMT_DC_1	QE_PMT_DC_2	2	1	#000000	0	2	7	2	#000000	#000000	0	#000000	14	1	2	0	0	47	1
+curve	JanetDig_QuantumEff_1	JanetDig_QuantumEff_2	2	1	#ff0000	0	2	7	4	#ff0000	#ff0000	0	#000000	14	1	2	0	0	11	1
+scale	0	0	0.55	0	7	5	0	0
+scale	1	0	0.55	0	7	5	0	0
+scale	2	100	900	0	9	5	0	0
+scale	3	100	900	0	9	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	3	3	3	3
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>266.57824933687</x>
+<y>0.52581018518519</y>
+<right>706.896551724138</right>
+<bottom>0.384490740740741</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(2) Double Chooz bialkali
+\l(3) KamLAND bialkali
+\l(1) 45mm dia. MCP-PMT (R3809-63), 
+extended red GaAsP photocathode
+</Text>
+<Font>Sans	15	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>255</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>

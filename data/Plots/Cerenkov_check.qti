@@ -1,0 +1,575 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	8
+<table>
+output1	42	2	26 Feb 2013 15:02:03
+geometry	0	435	445	220	minimized	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	1.54975e-06	0
+1	2.09863e-06	2.66926e-07
+2	2.6125e-06	5.13719e-07
+3	2.81639e-06	6.10496e-07
+4	3.12481e-06	7.55486e-07
+5	3.40206e-06	8.84669e-07
+6	3.65546e-06	1.00185e-06
+7	3.91184e-06	1.11891e-06
+8	4.15e-06	1.22562e-06
+9	4.34087e-06	1.30961e-06
+10	4.78062e-06	1.49741e-06
+11	5.14118e-06	1.64441e-06
+12	5.43736e-06	1.75855e-06
+13	5.716e-06	1.85966e-06
+14	5.88034e-06	1.91642e-06
+15	5.99528e-06	1.95458e-06
+16	6.27105e-06	2.04342e-06
+17	6.46946e-06	2.10654e-06
+18	6.68082e-06	2.17412e-06
+19	6.79175e-06	2.21018e-06
+20	7.02508e-06	2.28929e-06
+21	7.23211e-06	2.36247e-06
+22	7.45171e-06	2.44112e-06
+23	7.54334e-06	2.47376e-06
+24	7.73352e-06	2.54016e-06
+25	7.8077e-06	2.56447e-06
+26	7.8077e-06	2.56447e-06
+27	7.83226e-06	2.57201e-06
+28	7.98516e-06	2.61588e-06
+29	8.14415e-06	2.65828e-06
+30	8.25372e-06	2.68718e-06
+31	8.42376e-06	2.73246e-06
+32	8.48196e-06	2.74826e-06
+33	8.66163e-06	2.79849e-06
+34	9.11189e-06	2.93078e-06
+35	9.39079e-06	3.0163e-06
+36	9.68738e-06	3.10987e-06
+37	9.92245e-06	3.18669e-06
+38	1.02541e-05	3.29989e-06
+39	1.03405e-05	3.33075e-06
+40	1.06087e-05	3.43081e-06
+41	1.07013e-05	3.46683e-06
+</data>
+</table>
+<multiLayer>
+Goutput1	1	1	26 Feb 2013 15:02:24
+geometry	maximized	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	11	5	1343	424
+<PageGeometry>0.00805271	0.0113895	0.983163	0.965831</PageGeometry>
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	1	1	1	1	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	%(?X)	%(?Y)		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans	13	75	0	0	0
+ScaleFont0	Sans	11	75	0	0	0
+ScaleFont1	Sans	11	75	0	0	0
+ScaleFont2	Sans	11	75	0	0	0
+ScaleFont3	Sans	11	75	0	0	0
+AxisFont0	Sans	11	50	0	0	0
+AxisFont1	Sans	11	50	0	0	0
+AxisFont2	Sans	11	50	0	0	0
+AxisFont3	Sans	11	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#2c2c2c	#2c2c2c	#2c2c2c	#2c2c2c
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table1_1	Table1_2	2	1	#ff0000	0	1	7	2	#ff0000	#ff0000	0	#000000	14	1	2	0	0	50	1
+curve	output1_1	output1_2	2	1	#00ff00	0	1	7	3	#00ff00	#00ff00	0	#000000	14	1	2	0	0	41	1
+curve	Table2_1	Table2_2	2	1	#0000ff	0	1	7	4	#0000ff	#0000ff	0	#000000	14	1	2	0	0	41	1
+scale	0	2.4e-06	2.6e-06	0	5	5	0	0
+scale	1	2.4e-06	2.6e-06	0	5	5	0	0
+scale	2	7e-06	8e-06	0	6	5	0	0
+scale	3	7e-06	8e-06	0	6	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>7.0218340611354e-07</x>
+<y>3.6601941747573e-06</y>
+<right>1.54061135371179e-06</right>
+<bottom>2.33980582524272e-06</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+\l(2)%(2)
+\l(3)%(3)
+</Text>
+<Font>Sans	11	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+refraction_KamLAND_2	51	4	26 Feb 2013 15:17:56
+geometry	253	106	917	269	
+header	1[X]	2[Y]	3[X]	4[Y]
+ColWidth	100	100	225	100	
+<com>
+<col nr="2">
+1239.8/col("1")
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0
+HiddenColumn	0	0	0	0
+Comments					
+WindowLabel	/home/christoph/geant4/MyG4_applications/Sphere1-build/data/KamLAND/refraction_KamLAND_2.txt	2
+<data>
+0	115.855	1.588	10.70130766907	1.588
+1	116.866	1.619	10.60873136755	1.619
+2	119.897	1.656	10.34054229881	1.656
+3	120.908	1.692	10.2540774804	1.692
+4	124.949	1.732	9.92244835893	1.732
+5	127.981	1.767	9.687375469796	1.767
+6	132.023	1.794	9.390787968763	1.794
+7	136.064	1.818	9.111888523048	1.818
+8	143.137	1.873	8.66163186318	1.873
+9	146.169	1.91	8.481962659661	1.91
+10	147.179	1.929	8.42375610651	1.929
+11	150.211	1.947	8.253723096178	1.947
+12	152.232	1.947	8.144148405066	1.947
+13	155.263	1.926	7.985160662875	1.926
+14	158.294	1.813	7.832261488117	1.813
+15	158.792	1.797	7.807698120812	1.797
+16	158.792	1.793	7.807698120812	1.793
+17	160.315	1.704	7.733524623398	1.704
+18	160.719	1.7017	7.714084831289	1.7017
+19	161.123	1.6994	7.694742525896	1.6994
+20	161.528	1.6971	7.675449457679	1.6971
+21	161.932	1.6948	7.656300175382	1.6948
+22	162.336	1.6925	7.637246205401	1.6925
+23	162.74	1.6902	7.618286837901	1.6902
+24	163.144	1.6879	7.599421370078	1.6879
+25	163.549	1.6856	7.580602755138	1.6856
+26	163.9528	1.6833	7.56193245861	1.6833
+27	164.357	1.681	7.543335543968	1.681
+28	166.378	1.67	7.451706355408	1.67
+29	171.43	1.672	7.232106399113	1.672
+30	176.482	1.692	7.025079044888	1.692
+31	182.545	1.744	6.791749979457	1.744
+32	185.576	1.764	6.680820795793	1.764
+33	191.639	1.773	6.469455590981	1.773
+34	197.702	1.773	6.271054415231	1.773
+35	206.796	1.751	5.995280372928	1.751
+36	210.838	1.72	5.880344150485	1.72
+37	216.9	1.684	5.715998155832	1.684
+38	228.015	1.637	5.437361577089	1.637
+39	241.151	1.586	5.141177104802	1.586
+40	259.339	1.547	4.780615333598	1.547
+41	285.611	1.514	4.340869224225	1.514
+42	298.747	1.501	4.149999832634	1.501
+43	316.935	1.487	3.911843122407	1.487
+44	339.164	1.473	3.655458716137	1.473
+45	364.426	1.468	3.402062421452	1.468
+46	396.76	1.462	3.124810968848	1.462
+47	440.209	1.455	2.816389487721	1.455
+48	474.565	1.448	2.612497761108	1.448
+49	590.766	1.438	2.098631268556	1.438
+50	800	1.43	1.54975	1.43
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	26 Feb 2013 15:18:38
+geometry	192	52	535	474	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	517	411
+<PageGeometry>0.00948767	0.0117371	0.981025	0.964789</PageGeometry>
+PlotTitle	Title	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	%(?X)	%(?Y)		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans	13	75	0	0	0
+ScaleFont0	Sans	11	75	0	0	0
+ScaleFont1	Sans	11	75	0	0	0
+ScaleFont2	Sans	11	75	0	0	0
+ScaleFont3	Sans	11	75	0	0	0
+AxisFont0	Sans	11	50	0	0	0
+AxisFont1	Sans	11	50	0	0	0
+AxisFont2	Sans	11	50	0	0	0
+AxisFont3	Sans	11	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#2c2c2c	#2c2c2c	#2c2c2c	#2c2c2c
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	refraction_KamLAND_2_1	refraction_KamLAND_2_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	41	1
+scale	0	1.5	2	0	6	5	0	0
+scale	1	1.5	2	0	6	5	0	0
+scale	2	100	300	0	5	5	0	0
+scale	3	100	300	0	5	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>633.33333333333</x>
+<y>1.9819397993311</y>
+<right>793.734335839599</right>
+<bottom>1.92173913043478</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+</Text>
+<Font>Sans	11	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+Graph2	1	1	26 Feb 2013 15:22:43
+geometry	563	-34	535	474	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	517	411
+<PageGeometry>0.00948767	0.0117371	0.981025	0.964789</PageGeometry>
+PlotTitle	Title	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	1	1	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	%(?X)	%(?Y)		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans	13	75	0	0	0
+ScaleFont0	Sans	11	75	0	0	0
+ScaleFont1	Sans	11	75	0	0	0
+ScaleFont2	Sans	11	75	0	0	0
+ScaleFont3	Sans	11	75	0	0	0
+AxisFont0	Sans	11	50	0	0	0
+AxisFont1	Sans	11	50	0	0	0
+AxisFont2	Sans	11	50	0	0	0
+AxisFont3	Sans	11	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#2c2c2c	#2c2c2c	#2c2c2c	#2c2c2c
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	refraction_KamLAND_2_3	refraction_KamLAND_2_4	2	1	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	50	1
+scale	0	1.4	2	0	7	5	0	0
+scale	1	1.4	2	0	7	5	0	0
+scale	2	0	12	0	7	5	0	0
+scale	3	0	12	0	7	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.30075187969925</x>
+<y>1.9799331103679</y>
+<right>3.2781954887218</right>
+<bottom>1.92173913043478</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+</Text>
+<Font>Sans	11	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+Table1	51	2	26 Feb 2013 15:35:56
+geometry	0	0	445	220	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	1.54975e-06	0
+1	2.09863e-06	2.66926e-07
+2	2.6125e-06	5.13719e-07
+3	2.81639e-06	6.10496e-07
+4	3.12481e-06	7.55486e-07
+5	3.40206e-06	8.84669e-07
+6	3.65546e-06	1.00185e-06
+7	3.91184e-06	1.11891e-06
+8	4.15e-06	1.22562e-06
+9	4.34087e-06	1.30961e-06
+10	4.78062e-06	1.49741e-06
+11	5.14118e-06	1.64441e-06
+12	5.43736e-06	1.75855e-06
+13	5.716e-06	1.85966e-06
+14	5.88034e-06	1.91642e-06
+15	5.99528e-06	1.95458e-06
+16	6.27105e-06	2.04342e-06
+17	6.46946e-06	2.10654e-06
+18	6.68082e-06	2.17412e-06
+19	6.79175e-06	2.21018e-06
+20	7.02508e-06	2.28929e-06
+21	7.23211e-06	2.36247e-06
+22	7.45171e-06	2.44112e-06
+23	7.54334e-06	2.47376e-06
+24	7.56193e-06	2.48033e-06
+25	7.5806e-06	2.48691e-06
+26	7.59942e-06	2.49352e-06
+27	7.61829e-06	2.50014e-06
+28	7.63725e-06	2.50676e-06
+29	7.6563e-06	2.51341e-06
+30	7.67545e-06	2.52007e-06
+31	7.69474e-06	2.52675e-06
+32	7.71408e-06	2.53344e-06
+33	7.73352e-06	2.54015e-06
+34	7.8077e-06	2.56446e-06
+35	7.8077e-06	2.56446e-06
+36	7.83226e-06	2.572e-06
+37	7.98516e-06	2.61586e-06
+38	8.14415e-06	2.65826e-06
+39	8.25372e-06	2.68717e-06
+40	8.42376e-06	2.73244e-06
+41	8.48196e-06	2.74824e-06
+42	8.66163e-06	2.79847e-06
+43	9.11189e-06	2.93076e-06
+44	9.39079e-06	3.01628e-06
+45	9.68738e-06	3.10986e-06
+46	9.92245e-06	3.18668e-06
+47	1.02541e-05	3.29987e-06
+48	1.03405e-05	3.33074e-06
+49	1.06087e-05	3.4308e-06
+50	1.07013e-05	3.46681e-06
+</data>
+</table>
+<table>
+refraction_KamLAND_2_backup	42	6	26 Feb 2013 15:43:28
+geometry	104	44	445	220	
+header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]	6[Y]
+ColWidth	100	100	100	100	100	100	
+<com>
+<col nr="1">
+1.5
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0
+Comments							
+WindowLabel	/home/christoph/geant4/MyG4_applications/Sphere1-build/data/KamLAND/refraction_KamLAND_2_backup.txt	2
+<data>
+0	115.855	1.5				
+1	116.866	1.5				
+2	119.897	1.5				
+3	120.908	1.5				
+4	124.949	1.5				
+5	127.981	1.5				
+6	132.023	1.5				
+7	136.064	1.5				
+8	143.137	1.5				
+9	146.169	1.5				
+10	147.179	1.5				
+11	150.211	1.5				
+12	152.232	1.5				
+13	155.263	1.5				
+14	158.294	1.5				
+15	158.792	1.5				
+16	158.792	1.5				
+17	160.315	1.5				
+18	164.357	1.5				
+19	166.378	1.5				
+20	171.43	1.5				
+21	176.482	1.5				
+22	182.545	1.5				
+23	185.576	1.5				
+24	191.639	1.5				
+25	197.702	1.5				
+26	206.796	1.5				
+27	210.838	1.5				
+28	216.9	1.5				
+29	228.015	1.5				
+30	241.151	1.5				
+31	259.339	1.5				
+32	285.611	1.5				
+33	298.747	1.5				
+34	316.935	1.5				
+35	339.164	1.5				
+36	364.426	1.5				
+37	396.76	1.5				
+38	440.209	1.5				
+39	474.565	1.5				
+40	590.766	1.5				
+41	800	1.5	0	0	0	0
+</data>
+</table>
+<table>
+Table2	42	2	26 Feb 2013 15:45:00
+geometry	684	59	445	220	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	1.54975e-06	0
+1	2.09863e-06	2.43947e-07
+2	2.6125e-06	4.72332e-07
+3	2.81639e-06	5.62951e-07
+4	3.12481e-06	7.00027e-07
+5	3.40206e-06	8.2325e-07
+6	3.65546e-06	9.35871e-07
+7	3.91184e-06	1.04982e-06
+8	4.15e-06	1.15567e-06
+9	4.34087e-06	1.2405e-06
+10	4.78062e-06	1.43594e-06
+11	5.14118e-06	1.59619e-06
+12	5.43736e-06	1.72783e-06
+13	5.716e-06	1.85167e-06
+14	5.88034e-06	1.92471e-06
+15	5.99528e-06	1.97579e-06
+16	6.27105e-06	2.09836e-06
+17	6.46946e-06	2.18654e-06
+18	6.68082e-06	2.28048e-06
+19	6.79175e-06	2.32978e-06
+20	7.02508e-06	2.43348e-06
+21	7.23211e-06	2.52549e-06
+22	7.45171e-06	2.62309e-06
+23	7.54334e-06	2.66382e-06
+24	7.73352e-06	2.74834e-06
+25	7.8077e-06	2.78131e-06
+26	7.8077e-06	2.78131e-06
+27	7.83226e-06	2.79223e-06
+28	7.98516e-06	2.86018e-06
+29	8.14415e-06	2.93084e-06
+30	8.25372e-06	2.97954e-06
+31	8.42376e-06	3.05511e-06
+32	8.48196e-06	3.08098e-06
+33	8.66163e-06	3.16084e-06
+34	9.11189e-06	3.36095e-06
+35	9.39079e-06	3.48491e-06
+36	9.68738e-06	3.61672e-06
+37	9.92245e-06	3.7212e-06
+38	1.02541e-05	3.86859e-06
+39	1.03405e-05	3.90702e-06
+40	1.06087e-05	4.02621e-06
+41	1.07013e-05	4.06736e-06
+</data>
+</table>
+<open>1</open>

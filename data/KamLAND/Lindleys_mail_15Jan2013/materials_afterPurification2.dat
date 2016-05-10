@@ -1,0 +1,1415 @@
+# materials.dat
+# material properties input data file for KamLAND
+# read by KLInputDataReader
+#
+# First version:  Glenn Horton-Smith, Feb. 1999.
+# Cleaned up obsolete data and comments:  LLHsu Dec. 2004.
+# Extended wavelengths from 200nm down to 100 nm to account
+#   for possible missing Cerenkov radiation:  LLHsu Sept. 2005.
+#
+
+MATERIAL "Air"
+PROPERTY  RINDEX
+# UNITS  nm\E 1 	
+OPTION wavelength
+100 1.0003557     #Linear Extrap. from 200 nm, approx for Cerenkov Rad.-LLH
+200 1.0003236
+300 1.0002915
+500 1.0002792
+700 1.0002763
+800 1.0002756
+
+PROPERTY  ABSLENGTH
+# UNITS  nm\E mm 	
+OPTION wavelength
+100 1.0e6  
+200 1.0e6
+300 1.0e6
+330 1.0e6
+500 1.0e6
+600 1.0e6
+770 1.0e6
+800 1.0e6
+
+################
+
+MATERIAL "Water"
+PROPERTY  NEUTRON_CAPTURE_TIME
+# UNITS  MeV  ns
+0.0 163000.		# approximate -- FIXME!
+1.0 163000.
+
+PROPERTY  NEUTRON_SLOW_DIFFUSION_CONST
+# UNITS  MeV  mm*mm/ns
+0.0 0.03		# approximate -- FIXME!
+1.0 0.03
+
+PROPERTY  NEUTRON_FAST_DIFFUSION_RMS
+# UNITS  MeV  mm
+0.0  50.0		# approximate -- FIXME!
+1.0 50.0
+
+PROPERTY RINDEX
+# UNITS  nm\E 1 	
+OPTION wavelength
+100     1.517    #Linear Extrap. from 200 nm, approx for Cerenkov Rad.-LLH
+200     1.42516
+250     1.37761
+300     1.35942
+350     1.34978
+400     1.34378
+450     1.3397
+500     1.33676
+550     1.33458
+600     1.33293
+650     1.33165
+700     1.33065
+750     1.32986
+800     1.3292
+
+PROPERTY  ABSLENGTH   # VERY ROUGH GOAL!
+# UNITS  nm\E mm 	
+OPTION wavelength
+100 10.0e3   
+200 10.0e3
+800 10.0e3
+
+
+################
+
+MATERIAL  "Glass"
+PROPERTY  RINDEX
+# Numbers based on parameterization given in 
+# Motta and Schonert NIMA 539 (2005) 217
+# Its the best approximation we have since we
+# don't have a measured value for KamLAND PMT's
+# UNITS  nm\E 1 	
+OPTION wavelength
+100	1.848	      
+200	1.566         
+300	1.514         
+325	1.508
+350	1.503
+375	1.499
+400	1.496
+425	1.493
+450	1.491
+475	1.489
+500	1.487
+525	1.486
+550	1.484
+575	1.483
+600	1.482
+700	1.480
+800	1.478
+
+PROPERTY  ABSLENGTH   # UTTER FICTION!
+#
+# These numbers were extracted from 
+# the measured QE of the PMTs: 
+# QE_meas = QE_effective * exp(-x/abslength_glass)  
+# The measured QE efficiency is assumed to contain 
+# the attenuation through glass.   The maximum
+# abslength was fixed such that we achive a 1% reduction
+# in intensity after one normal-incident pass through the
+# glass.   This is consistent with data found at
+# http://www.camglassblowing.co.uk/gproperties.htm
+# stating that T = 91% through 2 mm and T = 92% through 
+# 3mm of borosilicate glass.  The remaining reduction
+# is likely due to reflections, which were not factored out
+# of the measurements.  [LLH]
+#
+# UNITS  nm\E mm 	
+OPTION wavelength
+100 1.00E-04
+260 1.00E-04
+270 0.8225
+280 1.5967
+285 2.74
+290 4.58
+300 6.55
+310 8.74
+330 31.36
+340 100
+350 215
+360 240
+370 246.81
+800 246.81
+
+################
+
+MATERIAL  "MineralOil"
+PROPERTY  NEUTRON_CAPTURE_TIME
+# UNITS  MeV  ns
+0.0 163000.		# approximate -- FIXME!
+1.0 163000.
+
+PROPERTY  NEUTRON_SLOW_DIFFUSION_CONST
+# UNITS  MeV  mm*mm/ns
+0.0 0.03		# approximate -- FIXME!
+1.0 0.03
+
+PROPERTY  NEUTRON_FAST_DIFFUSION_RMS
+# UNITS  MeV  mm
+0.0  50.0		# approximate -- FIXME!
+1.0 50.0
+
+PROPERTY  RINDEX
+# UNITS  nm\E 1 	
+OPTION wavelength
+#
+# Notes.
+# measured at 8/25/2001.
+# real datas are between 410 nm and 550 nm.
+# the othres are fitted data.   
+#
+# measured by T.Kawashima ( kawasima@awa.tohoku.ac.jp )
+# fitted by K.Inoue ( inoue@awa.tohoku.ac.jp )
+# add to CVS by H.Ikeda ( ikeda@awa.tohoku.ac.jp ) 
+#                                   (10/12/2001)
+#
+100 1.734        #Linear Extrap. from 200 nm, approx for Cerenkov Rad.-LLH
+200 1.564254165
+210 1.547450304
+220 1.533502221
+230 1.521801353
+240 1.511891484
+250 1.503425837
+260 1.496136785
+270 1.489815712
+280 1.484298110
+290 1.479452848
+300 1.475174427
+310 1.471377134
+320 1.467991114
+330 1.464958429
+340 1.462231398
+350 1.459769726
+360 1.457539797
+370 1.455513120
+380 1.453665614
+390 1.451976299
+400 1.450427651
+410 1.4501
+415 1.4483
+420 1.4479
+425 1.4470
+430 1.4464
+435 1.4458
+440 1.4455
+445 1.4448
+450 1.4444
+455 1.4436
+460 1.4434
+465 1.4430
+470 1.4425
+475 1.4420
+480 1.4415
+485 1.4411
+490 1.4409
+495 1.4403
+500 1.4402
+505 1.4398
+510 1.4395
+515 1.4391
+520 1.4388
+525 1.4383
+530 1.4382
+535 1.4379
+540 1.4376
+545 1.4373
+550 1.4371
+560 1.436554909
+570 1.436077118
+580 1.435625553
+590 1.435198069
+600 1.434793115
+610 1.434409022
+620 1.434044600
+630 1.433698177
+640 1.433368921
+650 1.433055401
+660 1.432756901
+670 1.432472229
+680 1.432200670
+690 1.431941390
+700 1.431693673
+710 1.431456685
+720 1.431230068
+730 1.431013107
+740 1.430805206
+750 1.430605888
+760 1.430414677
+770 1.430231214
+780 1.430055022
+790 1.429885745
+800 1.429722905
+
+
+PROPERTY  ABSLENGTH
+# UNITS  nm\E mm 	
+OPTION wavelength
+#
+# Sources:  Tajima's Master's Thesis, Fig 4.1 (p.60) for 290 to 330 nm;
+#           transparency from 1998 Collab. Meeting for 400 to 680 nm.
+# Feb. 05 - Filled in large gap between 330 and 400nm with numbers that Hatakeyama measured for *mineral oil*
+#           Adjusted numbers at 400-500nm to be more consistent with Hatakeyama's numbers, since I cannot
+#           find the 1998 collab meeting transparency.  The assumption here is that mineral oil and buffer
+#           oil have similar abs lengths.   These numbers may change if we are able to learn more later - LLH 
+100  0.1e-3     #
+200  0.1e-3	# (G4OpAbsorption / GetP.I.L. bug workaround)
+280  0.1e-3	# (G4OpAbsorption / GetP.I.L. bug workaround)
+290  56.e0
+300  0.3e3
+310  0.65e3
+320  0.85e3
+330  4.0e3      # somewhat uncertain
+340  8.0e3      # pulled off Hatekeyama's plot LLH
+360  16.0e3     # pulled off Hatekeyama's plot LLH
+380  24.0e3     # pulled off Hatekeyama's plot LLH
+400  24.0e3     # adjusted to be more consistent with hatekeyma's meas LLH
+450  30.0e3     # adjusted to be more consistent with hatekeyma's meas LLH
+500  30.0e3     # adjusted to be more consistent with hatekeyma's meas LLH  
+##400 12.0e3      # adjusted to be longer than scintillator, and to be more
+##450 20.0e3      # consistent with N-12 measurements on CCD camera web page - commented out in Feb 05 by LLH
+##500 20.0e3      # - commented out in Feb 05 by LLH
+540 40.0e3
+555 20.0e3
+570 40.0e3
+590 40.0e3
+600 25.0e3
+630  6.0e3
+650 20.0e3
+680 15.0e3
+770 10.0e3    # uncertain
+800  0.1e-3	# (G4OpAbsorption / GetP.I.L. bug workaround) 
+
+
+################
+
+MATERIAL  "photocathode"
+PROPERTY  EFFICIENCY  # data is from Hamamatsu catalog, curve 400K 
+# UNITS  nm\E 1 	
+OPTION wavelength
+#      
+#I'm scaling down the photocathode efficiency becuase it is high compared to the
+#Hamamatsu spec sheet from BKF.  The old values are commented out next to the new ones
+#The following comment applies to the original (pre 9/05) values:
+#    "data is from Hamamatsu catalog, curve 400K" - LLH 9/05.
+#
+#The glass attenuation is believed to be included in the QE measurements
+#taken from the Hamamatsu spec sheets.  These have been factored out and put into
+#glass abslength, and the effective value for the QE (below) has been set to a 
+#constant value for wavelengths below 370nm.  The original (pre 9/05) values remain
+#next to the effective ones as comments  - LLH 5/06
+#
+100     0.2487
+260     0.2487   
+270     0.2487 ##0.01  
+280     0.2487 ##0.05  
+285     0.2487 ##0.10  
+290     0.2487 ##0.15   
+300     0.2487 ##0.18  
+310     0.2487 ##0.20   
+330     0.2487 ##0.25 
+340     0.2487   
+350     0.2487   
+360     0.2487   
+370     0.2487 ##0.27  
+420     0.2305 ##0.25
+475     0.1840 ##0.20 
+500     0.1567 ##0.17 
+530     0.0930 ##0.10
+570     0.0455 ##0.05 
+600     0.0233 ##0.025
+630     0.0091 ##0.01 
+670     0.0010 ##0.001
+700     0.0
+800     0.0
+
+
+PROPERTY  RINDEX
+# UNITS  nm\E 1 	
+OPTION wavelength
+100 2.9                 # (extrapolation over wavelength is fiction) 
+200 2.9                 # From M.D.Lay meas. of Hamamatsu 8-inch tubes
+800 2.9                 # (extrapolation over wavelength is fiction)
+
+
+PROPERTY  KINDEX        # "k" in M.D.Lay paper for thin PMT layer
+# UNITS  nm\E 1 	
+OPTION wavelength
+100 1.6                 # (extrapolation over wavelength is fiction)
+200 1.6                 # From M.D.Lay meas. of Hamamatsu 8-inch tubes
+800 1.6                 # (extrapolation over wavelength is fiction)
+
+
+PROPERTY  THICKNESS     # Thickness of photocathode as function of Z position
+# UNITS  mm mm  	
+  188 26e-6               # 26 nm typical of M.D.Lay meas.; Z=188_mm is 20" top
+# 117 26e-6               # Z=116.7_mm is start of 20" torus section
+# 99  26e-6               # Z=99.0_mm is end of 17" active photocathode
+# 75  26e-6               # Z=75.0_mm is 8" PMT top
+# 51  26e-6               # Z=50.8_mm is 5" PMT top
+  0   26e-6               # Z=0 is equator; no data for thickness, assumed same
+#
+# Note that 17" and 20" PMTs have same size and shape!  Also note that,
+# at present, all PMTs use same "photocathode" properties; this will have
+# to change if we ever really want to have thickness as a function of Z,
+# which would have to be tailored according to PMT type.
+
+################
+
+MATERIAL  "scintillator"
+PROPERTY  NEUTRON_CAPTURE_TIME
+# UNITS  MeV  ns
+0.0 163000.		# from Geant4 simulation using pure neutron_hp
+1.0 163000.
+
+PROPERTY  NEUTRON_SLOW_DIFFUSION_CONST
+# UNITS  MeV  mm*mm/ns
+0.0 0.03		# from Geant4 simulation using pure neutron_hp
+1.0 0.03
+
+PROPERTY  NEUTRON_FAST_DIFFUSION_RMS
+# UNITS  MeV  mm
+0.0  50.0		# from full Geant4 neutron_hp simulation
+1.0  50.0
+
+PROPERTY  RINDEX
+# UNITS  nm\E 1 	
+OPTION wavelength
+#
+# Notes.
+# measured at 8/25/2001.
+# real datas are between 410 nm and 550 nm.
+# the othres are fitted data.   
+#
+# measured by T.Kawashima ( kawasima@awa.tohoku.ac.jp )
+# fitted by K.Inoue ( inoue@awa.tohoku.ac.jp )
+# add to CVS by H.Ikeda ( ikeda@awa.tohoku.ac.jp ) 
+#                                   (10/12/2001)
+#
+100 1.796         #Linear Extrap. from 200 nm, approx for Cerenkov Rad.-LLH
+200 1.592991471
+210 1.572721958
+220 1.555958152
+230 1.541943431
+240 1.530112624
+250 1.520036936
+260 1.511386752
+270 1.503905773
+280 1.497392654
+290 1.491686940
+300 1.486660242
+310 1.482208610
+320 1.478247046
+330 1.474705815
+340 1.471527100
+350 1.468662620
+360 1.466072083
+370 1.463721156
+380 1.461581111
+390 1.459627151
+400 1.457837939
+410 1.4562
+415 1.4556
+420 1.4548
+425 1.4540
+430 1.4534
+435 1.4525
+440 1.4519
+445 1.4513
+450 1.4507
+455 1.4502
+460 1.4497
+465 1.4493
+470 1.4488
+475 1.4481
+480 1.4476
+485 1.4472
+490 1.4468
+495 1.4462
+500 1.4460
+505 1.4456
+510 1.4452
+515 1.4448
+520 1.4445
+525 1.4441
+530 1.4438
+535 1.4434
+540 1.4432
+545 1.4428
+550 1.4424
+560 1.441920877
+570 1.441376567
+580 1.440862298
+590 1.440375924
+600 1.439915299
+610 1.439478636
+620 1.439064384
+630 1.438670993
+640 1.438297033
+650 1.437941194
+660 1.437602401
+670 1.437279463
+680 1.436971545
+690 1.436677694
+700 1.436396956
+710 1.436128616
+720 1.435871959
+730 1.435626268
+740 1.435390949
+750 1.435165405
+760 1.434949040
+770 1.434741616
+780 1.434542298
+790 1.434350848
+800 1.434166908
+
+
+PROPERTY LIGHT_YIELD
+# Light Yield of Scintillator.   If omitted, KLG4sim uses
+# the area of the scintillation spectrum.   This parameter
+# simplifies tuning of the absolute light yield of the simulation.   
+# There is only one value for this.  If additional
+# rows are added to this property, they are ignored.  
+# Current value was tuned with luxlevel 0 setting [LLH] - May 2006
+1 9030.5
+#1 7675.9  # from ~15% decrease in light yield observed after purification
+#1 8127.5  # %10 decrease in light yield
+#1 10670.0 # arbitrary light yield in order to reproduce the 203Hg gamma mean energy (EnergyA2Corr) 
+
+PROPERTY  SCINTILLATION
+# UNITS  nm\E (nm\E)^(-1)*(MeV)^(-1) 	
+OPTION dy_dwavelength
+#
+#  Source: Tajima's Master Thesis, Figure 4.3 (page 61) for shape
+#            ibid, Figure 4.10 and footnote 7 on page 16 for total light output
+#
+#  SCALED UP 15% August 28, 2002, to match experimental calibration.
+#  ...REMOVED 15% SCALE-UP Feb. 2005 to make mc agree with co60 calibration data - LLH 
+# 
+#     normalized data
+100 0 
+200 0
+335 0
+340 1
+345 10 
+347 19 
+350 37 
+352 56 
+354 74 
+356 93 
+358 111 
+360 130 
+363 143 
+376 143 
+383 130 
+388 111 
+396 93 
+403 74 
+411 56 
+422 37 
+438 19 
+450 10 
+460 7 
+470 4 
+480 3 
+490 2 
+500 1
+510 0
+800 0
+
+
+PROPERTY  SCINTWAVEFORM
+# UNITS  ns 1 		
+#
+# decay times match suekane's bench measurements (Dec. 1998), the data was taken from Brian Fujikawa's notebook.
+# - LLH
+-6.9  0.86
+-8.8  0.12
+-36.0 0.02
+
+#-7.9   0.79
+#-17.8   0.18
+#-30.0  0.03
+
+PROPERTY  SCINTWAVEFORMalpha
+# UNITS  ns 1 	
+# Decay times match suekane's measurement 
+-8.218 0.5206
+-23.41 0.4259
+-288.9 0.5356e-1
+
+PROPERTY  SCINTWAVEFORMneutron
+# UNITS  ns 1 		
+# Decay times match suekane's measurement 
+-6.862 0.7407
+-12.79 0.2050
+-84.34 0.5427e-1
+
+PROPERTY  SCINTMOD
+# UNITS  0 sigma(%)/sqrt(E)  # Scaling factor for resolution after 2nd purification
+#0 1.3
+
+
+# UNITS  1 mm/MeV
+# 1 0.106              # approximate Birk's constant, from tuning to 212Po alpha. 
+# 1 0.08
+# 1 0.13              # Modified Birk's constant after purification.
+1 0.13               # When using regular EM models, the value that best fit 
+	             # the data was similar to what BKF found using EGSnrc 
+                     # and calib data (0.123 mm/MeV), see:
+                     # http://kamland.lbl.gov/internal/fujikawa/EnergyCorrection/KamLAND-EnergyCorrection.pdf - LLH 9/2005
+	             # With the low energy model, the data is better fit with
+                     # a value that is ~15% lower than what BKF measured. - LLH 5/06
+
+PROPERTY  ABSLENGTH   
+# UNITS  nm\E mm 	
+OPTION wavelength
+#
+# Sources: Tajima's Master Thesis, Table 4.5 (p. 75) and Fig 4.11 (p. 65)
+#             for 350 to 470 nm;
+#          transparency from 1998 collab. mtg. for 500 to 680 nm
+#
+# Noted Error:  The attenuation lengths in Table 4.5 (p75) of Tajima's thesis are *incorrect*, 
+#               but the "T" values are correct.   The T values are consistent with the 
+#               attenuation lengths plotted in figure 4.21 (p76). - LLH
+#
+# Updated:  The LS had a noticeable change in attenuation length after purification finished.
+#           In order to try and account for these changes, I used the measured attenuation of
+#           sample LS_2008_084.dat (LS taken from D11 on 12/1/2008).  This sample came 
+#           directly from KamLAND to a holding tank in the distillation area near the end of the
+#           2nd purification campaign.  The measurements are in increments between 340nm and 550 nm,
+#           and the rest is filled by assumption.  The data is reported after the old, commented-out data below.
+#           --Chris Grant (3/5/2010)
+#           Ref: http://www.awa.tohoku.ac.jp/~grant/KamLAND/atten_length_results_phase2.html
+#
+# 100  1  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 200  1  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 300  1  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 350  27       #| 350-470 scaled by 2.0/1.5 to account for 2.0 g/L -> 1.5 g/L
+# 355  75       #| 
+# 360  650      #|
+# 370  6.5e3    #| These numbers pulled from plots in Tajima's thesis, scaled up by 2.0/1.5
+# 380 10.0e3    #| errors are very large on these numbers, 50% uncer - LLH
+# 386 12.0e3  # Thesis value*2.0/1.5 = 10m - LLH 
+# 395 20.0e3  # - filled in value - LLH 
+# 400 25.0e3  # - filled in value - LLH 
+# 406 25.3e3  # Thesis value*2.0/1.5 = 14.3m - LLH 
+# 421 25.3e3  # Thesis value*2.0/1.5 = 19.3m - LLH 
+# 446 25.8e3  # Thesis value*2.0/1.5 = 24.8m - LLH 
+# 470 28.4e3  # Thesis value&2.0/1.5 = 28.4m - LLH 
+# 500 30.0e3  # - filled in value
+# 540 40.0e3   
+# 555 20.0e3   
+# 570 40.0e3   
+# 590 40.0e3   
+# 600 25.0e3   
+# 630  6.0e3   
+# 650 20.0e3   
+# 680 15.0e3   
+# 770 10.0e3   # this point is uncertain
+# 800  0.1e-3  # (G4OpAbsorption / GetP.I.L. bug workaround)
+#
+# start of ATLES data
+# 100  1   # uncertain
+# 200  1   # uncertain
+# 300  1   # uncertain
+# 340  59
+# 365  173
+# 380  5.216e3
+# 400  9.003e3
+# 405  10.83e3
+# 436  14.81e3
+# 450  15.7e3
+# 500  15.1e3
+# 550  10.27e3
+# 600  10.00e3   # uncertain
+# 650  6.00e3   # uncertain
+# 700  4.0e3   # uncertain
+# 750  2.0e3   # uncertain
+# 800  0.1e-3   # uncertain
+#
+# start of old attenuation data decreased by 33% from Kibe's n-gamma capture vs. distance from PMT 
+# study after 2nd Purification phase
+#
+# 100  0.67  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 200  0.67  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 300  0.67  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 350  18.1       #| 350-470 scaled by 2.0/1.5 to account for 2.0 g/L -> 1.5 g/L
+# 355  50.3       #| 
+# 360  435.5      #|
+# 370  4.355e3    #| These numbers pulled from plots in Tajima's thesis, scaled up by 2.0/1.5
+# 380  6.7e3    #| errors are very large on these numbers, 50% uncer - LLH
+# 386  8.04e3  # Thesis value*2.0/1.5 = 10m - LLH 
+# 395  13.4e3  # - filled in value - LLH 
+# 400  16.75e3  # - filled in value - LLH 
+# 406  16.951e3  # Thesis value*2.0/1.5 = 14.3m - LLH 
+# 421  16.951e3  # Thesis value*2.0/1.5 = 19.3m - LLH 
+# 446  17.286e3  # Thesis value*2.0/1.5 = 24.8m - LLH 
+# 470  19.028e3  # Thesis value&2.0/1.5 = 28.4m - LLH 
+# 500  22.1e3  # - filled in value
+# 540  26.8e3   
+# 555  26.8e3   
+# 570  26.8e3   
+# 590  26.8e3   
+# 600  16.75e3   
+# 630  16.02e3   
+# 650  13.4e3   
+# 680  5.0e3   
+# 770  1.0e3   # this point is uncertain
+# 800  0.1e-3  # (G4OpAbsorption / GetP.I.L. bug workaround)
+#
+#
+# Old data with a 4% decrease
+#
+# 100  0.96  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 200  0.96  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 300  0.96  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 350  25.9      #| 350-470 scaled by 2.0/1.5 to account for 2.0 g/L -> 1.5 g/L
+# 355  70.0       #| 
+# 360  624.0        #|
+# 370  6.24e3    #| These numbers pulled from plots in Tajima's thesis, scaled up by 2.0/1.5
+# 380  9.6e3    #| errors are very large on these numbers, 50% uncer - LLH
+# 386  11.52e3  # Thesis value*2.0/1.5 = 10m - LLH 
+# 395  19.2e3  # - filled in value - LLH 
+# 400  24.0e3  # - filled in value - LLH 
+# 406  24.3e3  # Thesis value*2.0/1.5 = 14.3m - LLH 
+# 421  24.3e3  # Thesis value*2.0/1.5 = 19.3m - LLH 
+# 446  24.7e3  # Thesis value*2.0/1.5 = 24.8m - LLH 
+# 470  27.2e3  # Thesis value&2.0/1.5 = 28.4m - LLH 
+# 500  38.4e3  # - filled in value
+# 540  38.4e3   
+# 555  38.4e3   
+# 570  38.4e3   
+# 590  38.4e3  
+# 600  24.0e3   
+# 630  19.2e3   
+# 650  17.5e3   
+# 680  10.66e3   
+# 770  1.09e3   # this point is uncertain
+# 800  0.1e-3  # (G4OpAbsorption / GetP.I.L. bug workaround)
+#
+#
+# Old data with a 10% decrease
+#
+# 100  0.9  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 200  0.9  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 300  0.9  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 350  24.3       #| 350-470 scaled by 2.0/1.5 to account for 2.0 g/L -> 1.5 g/L
+# 355  67.5       #| 
+# 360  385.0      #|
+# 370  3.85e3    #| These numbers pulled from plots in Tajima's thesis, scaled up by 2.0/1.5
+# 380 7.0e3    #| errors are very large on these numbers, 50% uncer - LLH
+# 386 9.8e3  # Thesis value*2.0/1.5 = 10m - LLH 
+# 395 12.0e3  # - filled in value - LLH 
+# 400 15.5e3  # - filled in value - LLH 
+# 406 20.15e3  # Thesis value*2.0/1.5 = 14.3m - LLH 
+# 421 26.15e3  # Thesis value*2.0/1.5 = 19.3m - LLH 
+# 446 34.22e3  # Thesis value*2.0/1.5 = 24.8m - LLH 
+# 470 40.56e3  # Thesis value&2.0/1.5 = 28.4m - LLH 
+# 500 45.0e3  # - filled in value
+# 540 45.0e3   
+# 555 50.0e3   
+# 570 50.0e3   
+# 590 45.0e3   
+# 600 35.5e3   
+# 630 20.5e3   
+# 650 18.0e3   
+# 680 13.5e3   
+# 770 9.0e3   # this point is uncertain
+# 800  0.09e-3  # (G4OpAbsorption / GetP.I.L. bug workaround)
+#
+#
+# Old data modified by hand at different wavelengths 04/18/2011, C.Grant
+#
+ 100  0.9  # (G4OpAbsorption / GetP.I.L. bug workaround)
+ 200  0.9  # (G4OpAbsorption / GetP.I.L. bug workaround)
+ 300  20.0  # (G4OpAbsorption / GetP.I.L. bug workaround)
+ 350  80.0       #| 350-470 scaled by 2.0/1.5 to account for 2.0 g/L -> 1.5 g/L
+ 355  300.0       #| 
+ 360  700.0      #|
+ 370  2.4e3    #| These numbers pulled from plots in Tajima's thesis, scaled up by 2.0/1.5
+ 380 4.6e3    #| errors are very large on these numbers, 50% uncer - LLH
+ 386 8.5e3  # Thesis value*2.0/1.5 = 10m - LLH 
+ 395 14.5e3  # - filled in value - LLH 
+ 400 23.5e3  # - filled in value - LLH 
+ 406 34.0e3  # Thesis value*2.0/1.5 = 14.3m - LLH 
+ 415 40.0e3  # Added in by hand to adjust attenuation curve - CPG
+ 421 45.5e3  # Thesis value*2.0/1.5 = 19.3m - LLH 
+ 430 50.0e3  # Added in by hand to adjust attenuation curve - CPG
+ 446 52.0e3  # Thesis value*2.0/1.5 = 24.8m - LLH 
+ 470 52.0e3  # Thesis value&2.0/1.5 = 28.4m - LLH 
+ 500 50.0e3  # - filled in value
+ 540 44.0e3   
+ 555 40.0e3   
+ 570 38.0e3   
+ 590 35.0e3   
+ 600 30.5e3   
+ 630 25.5e3   
+ 650 20.0e3   
+ 680 13.5e3   
+ 770 9.0e3   # this point is uncertain
+ 800  0.09e-3  # (G4OpAbsorption / GetP.I.L. bug workaround)
+#
+#
+# Old Data increased by a factor 1.25
+#
+# 100  1.25  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 200  1.25  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 300  1.25  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 350  33.75       #| 350-470 scaled by 2.0/1.5 to account for 2.0 g/L -> 1.5 g/L
+# 355  93.75       #| 
+# 360  812.5      #|
+# 370  8.125e3    #| These numbers pulled from plots in Tajima's thesis, scaled up by 2.0/1.5
+# 380 12.5e3    #| errors are very large on these numbers, 50% uncer - LLH
+# 386 15.0e3  # Thesis value*2.0/1.5 = 10m - LLH 
+# 395 25.0e3  # - filled in value - LLH 
+# 400 31.25e3  # - filled in value - LLH 
+# 406 31.625e3  # Thesis value*2.0/1.5 = 14.3m - LLH 
+# 421 31.625e3  # Thesis value*2.0/1.5 = 19.3m - LLH 
+# 446 32.25e3  # Thesis value*2.0/1.5 = 24.8m - LLH 
+# 470 35.5e3  # Thesis value&2.0/1.5 = 28.4m - LLH 
+# 500 37.5e3  # - filled in value
+# 540 50.0e3   
+# 555 50.0e3   
+# 570 50.0e3   
+# 590 50.0e3   
+# 600 31.25e3   
+# 630 26.0e3   
+# 650 25.0e3   
+# 680 18.75e3   
+# 770 12.5e3   # this point is uncertain
+# 800  0.125e-3  # (G4OpAbsorption / GetP.I.L. bug workaround)
+#
+#
+# Old Data increase by a factor 2
+#
+# 100 2.0  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 200 2.0  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 300 2.0  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 350 54.0       #| 350-470 scaled by 2.0/1.5 to account for 2.0 g/L -> 1.5 g/L
+# 355 150.0       #| 
+# 360 1.30e3      #|
+# 370 13.0e3    #| These numbers pulled from plots in Tajima's thesis, scaled up by 2.0/1.5
+# 380 20.0e3    #| errors are very large on these numbers, 50% uncer - LLH
+# 386 24.0e3  # Thesis value*2.0/1.5 = 10m - LLH 
+# 395 40.0e3  # - filled in value - LLH 
+# 400 50.0e3  # - filled in value - LLH 
+# 406 50.6e3  # Thesis value*2.0/1.5 = 14.3m - LLH 
+# 421 50.6e3  # Thesis value*2.0/1.5 = 19.3m - LLH 
+# 446 51.6e3  # Thesis value*2.0/1.5 = 24.8m - LLH 
+# 470 56.8e3  # Thesis value&2.0/1.5 = 28.4m - LLH 
+# 500 60.0e3  # - filled in value
+# 540 80.0e3   
+# 555 80.0e3   
+# 570 80.0e3   
+# 590 80.0e3   
+# 600 50.0e3   
+# 630 41.6e3   
+# 650 40.0e3   
+# 680 30.0e3   
+# 770 20.0e3   # this point is uncertain
+# 800 0.20e-3  # (G4OpAbsorption / GetP.I.L. bug workaround)
+#
+#
+# Old Data decrease by a factor 10
+#
+# 100  0.1  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 200  0.1  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 300  0.1  # (G4OpAbsorption / GetP.I.L. bug workaround)
+# 350  2.7       #| 350-470 scaled by 2.0/1.5 to account for 2.0 g/L -> 1.5 g/L
+# 355  7.5       #| 
+# 360  65.0      #|
+# 370  6.5e2   #| These numbers pulled from plots in Tajima's thesis, scaled up by 2.0/1.5
+# 380 10.0e2    #| errors are very large on these numbers, 50% uncer - LLH
+# 386 12.0e2  # Thesis value*2.0/1.5 = 10m - LLH 
+# 395 20.0e2  # - filled in value - LLH 
+# 400 25.0e2  # - filled in value - LLH 
+# 406 25.3e2  # Thesis value*2.0/1.5 = 14.3m - LLH 
+# 421 25.3e2  # Thesis value*2.0/1.5 = 19.3m - LLH 
+# 446 25.8e2  # Thesis value*2.0/1.5 = 24.8m - LLH 
+# 470 28.4e2  # Thesis value&2.0/1.5 = 28.4m - LLH 
+# 500 30.0e2  # - filled in value
+# 540 40.0e2   
+# 555 20.0e2   
+# 570 40.0e2   
+# 590 40.0e2   
+# 600 25.0e2   
+# 630  6.0e2   
+# 650 20.0e2   
+# 680 15.0e2   
+# 770 10.0e2   # this point is uncertain
+# 800  0.1e-3  # (G4OpAbsorption / GetP.I.L. bug workaround)
+ 
+
+PROPERTY OPSCATFRAC
+OPTION wavelength
+# This number is:  (probability for light to elastically scatter)/(probability for light to interact at all w/ LS)
+# These numbers calculated using data from M. Johnson's thesis (Ph.D. candidate at Princeton University in 
+# chemical engineering, measured Borexino LS properties).   Combined with a very small amount of data from
+# MiniBoone on MO elastic scattering.   
+# 100 0.0 
+# 200 0.0
+# 300 0.0
+# 320 0.0
+# 340 0.0
+# 350 0.0
+# 360 0.002
+# 370 0.05
+# 380 0.24
+# 390 0.36
+# 400 0.38
+# 410 0.44
+# 420 0.47
+# 425 0.50
+# 450 0.49
+# 475 0.44
+# 500 0.37
+# 800 0.37
+#
+#
+# Old Values scaled down by a factor of 2
+#
+# 100 0.0 
+# 200 0.0
+# 300 0.0
+# 320 0.0
+# 340 0.0
+# 350 0.0
+# 360 0.001
+# 370 0.025
+# 380 0.12
+# 390 0.18
+# 400 0.19
+# 410 0.22
+# 420 0.235
+# 425 0.25
+# 450 0.245
+# 475 0.22
+# 500 0.185
+# 800 0.185
+#
+#
+# Old Values modified by hand
+#
+ 100 0.0 
+ 200 0.0
+ 300 0.0
+ 320 0.0
+ 340 0.0
+ 350 0.0
+ 360 0.005
+ 370 0.02
+ 380 0.035
+ 390 0.065
+ 400 0.125
+ 410 0.15
+ 420 0.34
+ 425 0.45
+ 430 0.49
+ 440 0.52
+ 450 0.55
+ 475 0.55
+ 500 0.375
+ 800 0.305
+#
+#
+# Old Values scaled up by about 10%
+#
+#  100 0.0 
+#  200 0.0
+#  300 0.0
+#  320 0.0
+#  340 0.0
+#  350 0.0
+#  360 0.0022
+#  370 0.055
+#  380 0.264
+#  390 0.396
+#  400 0.418
+#  410 0.484
+#  420 0.517
+#  425 0.55
+#  450 0.539
+#  475 0.484
+#  500 0.407
+#  800 0.407
+
+
+
+PROPERTY REEMISSION_PROB
+OPTION wavelength
+# AttLength_scint/AbsLength_PPO = prob for reemssion. 
+# Reemission prob calculated from effective PPO and PC absorption length data 
+# in "Nucl. Phys. B Proc. Suppl. 78 (1999) 120-124".   
+# LS attenuation length also uses data taken by Hatakeyama posted on 
+# http://www.awa.tohoku.ac.jp/~kamyshko/cherenkov/cherenkov.html under the link "Summary.pdf"
+# We are assuming 70% reemission if absorbed by PPO (for all wavelength).  Borexino found 80%
+# worked for their simulation.  I found that reducing to 70% removed a curious snaking in the
+# data/mc discrepancies.  - (Feb 2005, LLH)
+# Ignoring PC reemission because I think its negligible (LLH 2004).
+ 100 0.7  # Put these in for mysterious bug, shouldn't affect anything (LLH)
+ 200 0.7  # Put these in for mysterious bug, shouldn't affect anything (LLH)
+ 300 0.7  # Put these in for mysterious bug, shouldn't affect anything (LLH)
+ 310 0.700 
+ 315 0.700 
+ 320 0.700 
+ 330 0.700 
+ 335 0.700 
+ 340 0.700 
+ 345 0.700 
+ 350 0.700 
+ 355 0.699 
+ 360 0.695 
+ 365 0.679 
+ 370 0.611 
+ 375 0.445 
+ 380 0.292 
+ 385 0.210 
+ 390 0.165 
+ 395 0.154 
+ 400 0.138 
+ 405 0.136 
+ 410 0.120 
+ 415 0.099 
+ 420 0.099 
+ 425 0.094 
+ 430 0.096 
+ 435 0.081 
+ 440 0.085 
+ 445 0.088 
+ 450 0.080 
+ 455 0.083 
+ 460 0.068 
+ 465 0.071 
+ 470 0.066 
+ 475 0.054 
+ 480 0.056 
+ 485 0.052 
+ 490 0.046 
+ 495 0.040 
+ 500 0.041 
+ 505 0.031 
+ 510 0.034 
+ 515 0.040 
+ 520 0.028 
+ 525 0.039 
+ 600 0.0
+ 700 0.0
+ 770 0.0
+ 800 0.0
+
+################
+MATERIAL "PMT_Vac"
+PROPERTY  RINDEX
+# UNITS  nm\E 1 	
+OPTION wavelength
+100 1.000001 
+200 1.000001
+800 1.000001
+
+
+PROPERTY  ABSLENGTH   # UTTER FICTION!
+# UNITS  nm\E mm 	
+OPTION wavelength
+100 1.0e9  
+200 1.0e9
+800 1.0e9
+
+
+################
+MATERIAL "Acrylic"
+PROPERTY  RINDEX
+# UNITS  nm\E 1 	
+OPTION wavelength
+#
+# Notes.
+# Taken from Koseki's report dated 2001-12-25.  Data was measured by Koseki at
+# 10C, 14C, 20C.  The data show very little temperature dependence.  Using
+# meausurements for 14C.  Data was taken between 410 nm and 550 nm, and 
+# fit with:  n(L) = a + b/L^2 + c/L^4 (L = wavelength in nm),
+# where a = 1.4791, b = 4461.082, c = 9.4481e7  
+# added to CVS by LLH (llhsu@lbl.gov), 5/05
+#
+100     1.859        #Linear Extrap. from 200 nm, approx for Cerenkov Rad.-LLH
+200	1.649663719
+210	1.628825454
+220	1.611589517
+230	1.597178884
+240	1.585012708
+250	1.574650466
+260	1.565753618
+270	1.558058821
+280	1.55135893
+290	1.54548932
+300	1.540317908
+310	1.535737776
+320	1.531661671
+330	1.528017834
+340	1.524746833
+350	1.521799111
+360	1.519133088
+370	1.516713674
+380	1.51451109
+390	1.512499934
+400	1.510658429
+410	1.508967825
+415	1.508173954
+420	1.507411901
+425	1.506679969
+430	1.505976572
+435	1.505300229
+440	1.504649554
+445	1.50402325
+450	1.5034201
+455	1.502838963
+460	1.502278769
+465	1.501738511
+470	1.501217244
+475	1.500714076
+480	1.500228171
+485	1.499758737
+490	1.49930503
+495	1.498866348
+500	1.498442025
+505	1.498031435
+510	1.497633985
+515	1.497249114
+520	1.496876289
+525	1.496515008
+530	1.496164794
+535	1.495825194
+540	1.495495778
+545	1.495176138
+550	1.494865888
+560	1.4942721
+570	1.493711677
+580	1.493182139
+590	1.492681235
+600	1.492206915
+610	1.491757312
+620	1.49133072
+630	1.490925581
+640	1.490540465
+650	1.490174061
+660	1.489825166
+670	1.489492671
+680	1.489175554
+690	1.488872872
+700	1.488583756
+710	1.488307399
+720	1.488043055
+730	1.487790031
+740	1.487547685
+750	1.487315419
+760	1.487092678
+770	1.486878943
+780	1.486673732
+790	1.486476594
+800	1.486287107
+
+
+PROPERTY  ABSLENGTH   
+#
+#Notes:
+#This data was given to us by Suekane in the 
+#from of transmission through 3mm
+#of acrylic.  The rise at 375 is very sharp 
+#because transmission was measured to be 1.00000
+#for wavelengths greater than 380 (in 5nm increments). 
+#These values are replacing older "fictional values" as
+#of June 11, 2006 [LLH].  
+#
+# UNITS  nm\E mm 	
+OPTION wavelength
+100 0.1e-3      # (G4OpAbsorption / GetP.I.L. bug workaround)
+260 0.1e-3	# (G4OpAbsorption / GetP.I.L. bug workaround)
+260	 1.00E-03
+265	 1.100 
+270	 1.994 
+275	 3.898 
+280	 6.985 
+285	10.937 
+290	16.242 
+295	22.073 
+300	29.278 
+305	37.340 
+310	46.141 
+315	52.230 
+320	58.632 
+325	64.963 
+330	75.040 
+335	82.690 
+340	92.037 
+345	103.756  
+350	124.810 
+355	192.797
+360	251.022
+365	419.256
+370	841.196
+375	1259.004
+380 1.0e5
+800 1.0e5	# (G4OpAbsorption / GetP.I.L. bug workaround)
+
+################
+MATERIAL "Nylon"
+PROPERTY  RINDEX
+# UNITS  nm\E 1 	
+OPTION wavelength
+#
+# Notes.
+# measured at 8/25/2001.
+# real datas are between 410 nm and 550 nm.
+# the othres are fitted data.   
+#
+# measured by T.Kawashima ( kawasima@awa.tohoku.ac.jp )
+# fitted by K.Inoue ( inoue@awa.tohoku.ac.jp )
+# add to CVS by H.Ikeda ( ikeda@awa.tohoku.ac.jp ) 
+#                                   (10/12/2001)
+#
+100 1.8833        #Linear Extrap. from 200 nm, approx for Cerenkov Rad.-LLH
+200 1.686320066
+210 1.666642904
+220 1.650328636
+230 1.636657953
+240 1.625091791
+250 1.615220785
+260 1.606729507
+270 1.599372268
+280 1.592955470
+290 1.587324858
+300 1.582356572
+310 1.577950001
+320 1.574023247
+330 1.570508361
+340 1.567349315
+350 1.564499378
+360 1.561919093
+370 1.559574962
+380 1.557439089
+390 1.555486917
+400 1.553698063
+410 1.5522
+415 1.5514
+420 1.5504
+425 1.5497
+430 1.5490
+435 1.5486
+440 1.5479
+445 1.5475
+450 1.5468
+455 1.5461
+460 1.5456
+465 1.5451
+470 1.5445
+475 1.5439
+480 1.5435
+485 1.5430
+490 1.5426
+495 1.5422
+500 1.5419
+505 1.5414
+510 1.5409
+515 1.5406
+520 1.5402
+525 1.5399
+530 1.5395
+535 1.5392
+540 1.5388
+545 1.5386
+550 1.5386
+560 1.537707090
+570 1.537157655
+580 1.536638260
+590 1.536146760
+600 1.535681248
+610 1.535239816
+620 1.534820914
+630 1.534422874
+640 1.534044504
+650 1.533684373
+660 1.533341408
+670 1.533014417
+680 1.532702565
+690 1.532404780
+700 1.532120228
+710 1.531848311
+720 1.531588078
+730 1.531338930
+740 1.531100392
+750 1.530871630
+760 1.530652165
+770 1.530441642
+780 1.530239463
+790 1.530045152
+800 1.529858351
+
+
+PROPERTY  ABSLENGTH   # UTTER FICTION!
+# UNITS  nm\E mm 	
+OPTION wavelength
+100 0.1e-3      # (G4OpAbsorption / GetP.I.L. bug workaround)
+200 0.1e-3	# (G4OpAbsorption / GetP.I.L. bug workaround)
+300 0.1e-3	# (G4OpAbsorption / GetP.I.L. bug workaround)
+330 1.0e3
+500 2.0e3
+600 1.0e3
+770 0.5e3
+800 0.1e-3	# (G4OpAbsorption / GetP.I.L. bug workaround)
+
+
+################
+MATERIAL "StainlessSteel"
+PROPERTY  REFLECTIVITY
+# UNITS  nm\E 1 	
+OPTION wavelength
+100 0.4         # a crude guess somewhat informed by Bob S.
+200 0.4         # a crude guess somewhat informed by Bob S.
+800 0.4         # a crude guess somewhat informed by Bob S.
+
+#100 0.0
+#200 0.0
+#800 0.0
+
+
+# Set to *arbitrary* small value to prevent
+# material from going transparent when 
+# OpBoundary processes are disabled - LLH 8/05
+PROPERTY  ABSLENGTH  # UTTER FICTION!  
+# UNITS  nm\E mm 	
+OPTION wavelength
+100 1e-6   
+200 1e-6
+800 1e-6
+
+
+################
+MATERIAL "Tyvek"
+PROPERTY  REFLECTIVITY
+# UNITS  nm\E 1 	
+OPTION wavelength
+100 0.95        # a crude guess
+200 0.95        # a crude guess
+800 0.95        # a crude guess
+
+#100 0.0
+#200 0.0
+#800 0.0
+
+
+# Set to *arbitrary* small value to prevent
+# material from going transparent when 
+# OpBoundary processes are disabled - LLH 8/05
+PROPERTY  ABSLENGTH   # UTTER FICTION!  
+# UNITS  nm\E mm 	
+OPTION wavelength
+100 1e-6  
+200 1e-6
+800 1e-6
+
+
+################
+MATERIAL "blackAcryl"
+PROPERTY  REFLECTIVITY
+# UNITS  nm\E 1 	
+OPTION wavelength
+100 0.1        # a crude guess
+200 0.1        # a crude guess
+800 0.1        # a crude guess
+
+#100 0.0
+#200 0.0
+#800 0.0
+
+
+# Set to *arbitrary* small value to prevent
+# material from going transparent when 
+# OpBoundary processes are disabled - LLH 8/05
+PROPERTY  ABSLENGTH  # UTTER FICTION!  
+# UNITS  nm\E mm 	
+OPTION wavelength
+100 1e-6  
+200 1e-6
+800 1e-6
+
+
+###################
+MATERIAL "PMT_Mirror"
+PROPERTY REFLECTIVITY
+# UNITS  nm\E 1 	
+OPTION wavelength
+100 0.90        # a crude guess
+200 0.90        # a crude guess
+800 0.90        # a crude guess
+
+#100 0.0
+#200 0.0
+#800 0.0
+
+
+# Set to *arbitrary* small value to prevent
+# material from going transparent when 
+# OpBoundary processes are disabled - LLH 8/05
+PROPERTY  ABSLENGTH   # UTTER FICTION!  
+# UNITS  nm\E mm 	
+OPTION wavelength
+100 1e-6 
+200 1e-6
+800 1e-6
+
+
+###################
+MATERIAL "Kevlar"
+
+# Set to *arbitrary* small value to prevent
+# material from going transparent when 
+# OpBoundary processes are disabled - LLH 8/05
+PROPERTY  ABSLENGTH   # UTTER FICTION!  
+# UNITS  nm\E mm 	
+OPTION wavelength
+100 1e-6  
+200 1e-6
+800 1e-6
+
+
+###################
+MATERIAL "Delrin"
+
+# Set to *arbitrary* small value to prevent
+# material from going transparent when 
+# OpBoundary processes are disabled - LLH 8/05
+PROPERTY  ABSLENGTH   # UTTER FICTION!  
+# UNITS  nm\E mm 	
+OPTION wavelength
+100 1e-6  
+200 1e-6
+800 1e-6
+
+
+###################
+MATERIAL "Polyethylene"
+PROPERTY  NEUTRON_CAPTURE_TIME
+# UNITS  MeV  ns
+0.0 163000.		# approximate -- FIXME!
+1.0 163000.
+
+PROPERTY  NEUTRON_SLOW_DIFFUSION_CONST
+# UNITS  MeV  mm*mm/ns
+0.0 0.03		# approximate -- FIXME!
+1.0 0.03
+
+PROPERTY  NEUTRON_FAST_DIFFUSION_RMS
+# UNITS  MeV  mm
+0.0  50.0		# approximate -- FIXME!
+1.0  50.0
+
+PROPERTY  ABSLENGTH   # UTTER FICTION!
+# UNITS  nm\E mm 	
+OPTION wavelength
+100 1.0      	# 
+200 1.0		# (G4OpAbsorption / GetP.I.L. bug workaround)
+300 1.0		# (G4OpAbsorption / GetP.I.L. bug workaround)
+800 1.0		# (G4OpAbsorption / GetP.I.L. bug workaround)

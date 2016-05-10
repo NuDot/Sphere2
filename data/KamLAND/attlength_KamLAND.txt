@@ -1,0 +1,26 @@
+100 0.001  # (G4OpAbsorption / GetP.I.L. bug workaround)  extracted from materials.dat from Lindley's email on 15Jan2013
+200 0.001  # (G4OpAbsorption / GetP.I.L. bug workaround)
+300 0.001  # (G4OpAbsorption / GetP.I.L. bug workaround)
+350 0.027       #| 350-470 scaled by 2.0/1.5 to account for 2.0 g/L -> 1.5 g/L
+355 0.075       #| 
+360 0.650      #|
+370 6.5    #| These numbers pulled from plots in Tajima's thesis, scaled up by 2.0/1.5
+380 10.0    #| errors are very large on these numbers, 50% uncer - LLH
+386 12.0  # Thesis value*2.0/1.5 = 10m - LLH 
+395 20.0  # - filled in value - LLH 
+400 25.0  # - filled in value - LLH 
+406 25.3  # Thesis value*2.0/1.5 = 14.3m - LLH 
+421 25.3  # Thesis value*2.0/1.5 = 19.3m - LLH 
+446 25.8  # Thesis value*2.0/1.5 = 24.8m - LLH 
+470 28.4  # Thesis value&2.0/1.5 = 28.4m - LLH 
+500 30.0  # - filled in value
+540 40.0   
+555 20.0   
+570 40.0   
+590 40.0   
+600 25.0   
+630 6.0   
+650 20.0   
+680 15.0   
+770 10.0   # this point is uncertain
+800 0.1e-6  # (G4OpAbsorption / GetP.I.L. bug workaround)

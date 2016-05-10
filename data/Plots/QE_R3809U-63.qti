@@ -1,0 +1,130 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	2
+<table>
+Digitization_R3809U-63	49	2	21 May 2013 11:24:29
+geometry	910	104	445	220	active
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	250.8	0.1
+1	254.8	0.2
+2	257.5	0.3
+3	258.8	0.4
+4	260.2	0.5
+5	260.7	0.6
+6	261.5	0.7
+7	264.2	0.8
+8	265.5	0.9
+9	266.9	1
+10	273.6	2
+11	278.9	3
+12	282.9	4
+13	288.3	5
+14	291	6
+15	296.3	7
+16	301.7	8
+17	305.7	9
+18	311	10
+19	327.1	13.5
+20	348.5	17.3
+21	363.9	20
+22	400	27
+23	443.5	32.4
+24	474.2	35.4
+25	500	36.2
+26	530.7	35.7
+27	573.5	33.9
+28	612	30
+29	639.3	26.7
+30	676.8	21.4
+31	695	20
+32	718	17.1
+33	737.8	12.1
+34	745.8	10
+35	751.2	9
+36	753.8	8
+37	757.8	7
+38	760.5	6
+39	763.2	5
+40	767.2	4
+41	771.2	3
+42	776.8	2
+43	784.6	1
+44	785.9	0.9
+45	786.5	0.8
+46	800	0.2
+47	807.3	0.1
+</data>
+</table>
+<multiLayer>
+GR3809U-63	1	1	21 May 2013 11:24:48
+geometry	192	-3	779	581	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	761	518
+<PageGeometry>0.00648508	0.00938086	0.98703	0.971857</PageGeometry>
+PlotTitle	QE of Hamamatsu R3809U-63	#000000	4
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	1	1	1	1	#a0a0a4	0	0.5	#a0a0a4	2	0.4	#a0a0a4	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	wavelength [nm]	QE [%]		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans	16	75	0	0	0
+ScaleFont0	Sans	14	75	0	0	0
+ScaleFont1	Sans	14	75	0	0	0
+ScaleFont2	Sans	14	75	0	0	0
+ScaleFont3	Sans	14	75	0	0	0
+AxisFont0	Sans	14	50	0	0	0
+AxisFont1	Sans	14	50	0	0	0
+AxisFont2	Sans	14	50	0	0	0
+AxisFont3	Sans	14	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#2c2c2c	#2c2c2c	#2c2c2c	#2c2c2c
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Digitization_R3809U-63_1	Digitization_R3809U-63_2	2	1	#000000	0	2	7	1	#000000	#000000	0	#000000	14	1	2	0	0	49	1
+scale	0	0.05	100	0	4	5	1	0
+scale	1	0.05	100	0	4	5	1	0
+scale	2	200	900	0	8	5	0	0
+scale	3	200	900	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	3	3	3	3
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>

@@ -1,0 +1,514 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	5
+<table>
+Table1	30	2	14 Jan 2013 11:28:43
+geometry	0	23	445	220	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+</data>
+</table>
+<table>
+absorption_file_toluene	261	2	14 Jan 2013 11:29:10
+geometry	445	23	445	220	
+header	1[X]	3[Y]
+ColWidth	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	/home/christoph/geant4/MyG4_applications/Sphere1-build/data/absorption_file_toluene.txt	2
+<data>
+0	340	4.65331e-05
+1	341	7.05998e-05
+2	342	0.000110118
+3	343	0.000178346
+4	344	0.000276297
+5	345	0.000413447
+6	346	0.000515635
+7	347	0.000614508
+8	348	0.000709412
+9	349	0.00080034
+10	350	0.000826883
+11	351	0.000859321
+12	352	0.000922271
+13	353	0.000995147
+14	354	0.00106635
+15	355	0.00113302
+16	356	0.00119401
+17	357	0.00124907
+18	358	0.00130013
+19	359	0.00134722
+20	360	0.00139152
+21	361	0.00142409
+22	362	0.00146892
+23	363	0.00152542
+24	364	0.00156899
+25	365	0.00161759
+26	366	0.00167179
+27	367	0.00173504
+28	368	0.00179924
+29	369	0.00187012
+30	370	0.00194535
+31	371	0.0020251
+32	372	0.0021105
+33	373	0.00220211
+34	374	0.00229911
+35	375	0.0024034
+36	376	0.00251698
+37	377	0.00264057
+38	378	0.00277619
+39	379	0.00292821
+40	380	0.00309896
+41	381	0.00329367
+42	382	0.00351702
+43	383	0.00377802
+44	384	0.00409065
+45	385	0.00448312
+46	386	0.00493247
+47	387	0.00547909
+48	388	0.00615701
+49	389	0.00698955
+50	390	0.00802314
+51	391	0.009365
+52	392	0.0110708
+53	393	0.0132731
+54	394	0.0161879
+55	395	0.0200933
+56	396	0.0252874
+57	397	0.0324409
+58	398	0.0421697
+59	399	0.0555893
+60	400	0.0739767
+61	401	0.0986337
+62	402	0.132183
+63	403	0.178917
+64	404	0.243185
+65	405	0.328046
+66	406	0.439574
+67	407	0.583113
+68	408	0.758908
+69	409	0.963681
+70	410	1.20261
+71	411	1.47337
+72	412	1.76393
+73	413	2.08469
+74	414	2.41382
+75	415	2.76468
+76	416	3.14639
+77	417	3.52807
+78	418	3.90879
+79	419	4.34582
+80	420	4.70436
+81	421	5.10495
+82	422	5.49143
+83	423	5.88394
+84	424	6.23675
+85	425	6.60934
+86	426	6.78886
+87	427	7.12839
+88	428	7.37378
+89	429	7.5284
+90	430	7.8173
+91	431	8.05709
+92	432	8.22855
+93	433	8.44666
+94	434	8.6484
+95	435	8.80467
+96	436	9.02887
+97	437	9.11694
+98	438	9.32876
+99	439	9.45886
+100	440	9.63428
+101	441	9.73176
+102	442	9.95135
+103	443	10.2294
+104	444	10.1922
+105	445	10.4328
+106	446	10.563
+107	447	10.7075
+108	448	10.8032
+109	449	11.3303
+110	450	11.3088
+111	451	11.4897
+112	452	11.7796
+113	453	11.9323
+114	454	12.3965
+115	455	12.5389
+116	456	12.629
+117	457	12.9705
+118	458	13.1229
+119	459	13.4613
+120	460	13.6906
+121	461	13.9687
+122	462	14.1326
+123	463	14.336
+124	464	14.7462
+125	465	15.1321
+126	466	15.4755
+127	467	16.1094
+128	468	15.5627
+129	469	16.2675
+130	470	16.2639
+131	471	16.9757
+132	472	17.2591
+133	473	17.3905
+134	474	17.4682
+135	475	18.3044
+136	476	18.1678
+137	477	18.6408
+138	478	18.439
+139	479	19.196
+140	480	19.803
+141	481	21.1928
+142	482	21.0512
+143	483	21.5186
+144	484	22.185
+145	485	22.725
+146	486	23.4292
+147	487	23.71
+148	488	24.5049
+149	489	24.641
+150	490	25.5632
+151	491	25.1456
+152	492	25.4483
+153	493	26.0945
+154	494	25.5126
+155	495	26.9749
+156	496	27.3934
+157	497	28.2598
+158	498	28.2493
+159	499	30.3035
+160	500	28.9681
+161	501	31.0526
+162	502	32.063
+163	503	31.1231
+164	504	32.4966
+165	505	33.7777
+166	506	33.2696
+167	507	34.3689
+168	508	34.1284
+169	509	35.2634
+170	510	35.9771
+171	511	37.5556
+172	512	40.1732
+173	513	41.3832
+174	514	38.2965
+175	515	44.0173
+176	516	45.9239
+177	517	46.047
+178	518	46.9052
+179	519	51.0602
+180	520	47.1573
+181	521	55.6824
+182	522	54.7447
+183	523	55.4549
+184	524	65.0871
+185	525	61.4353
+186	526	66.8013
+187	527	60.3799
+188	528	69.5275
+189	529	72.7648
+190	530	64.1176
+191	531	64.9431
+192	532	64.8361
+193	533	63.8682
+194	534	66.5139
+195	535	80.9287
+196	536	75.2075
+197	537	85.7071
+198	538	99.3555
+199	539	108.515
+200	540	95.3408
+201	541	105.33
+202	542	130.391
+203	543	109.147
+204	544	137.962
+205	545	127.263
+206	546	127.814
+207	547	115.935
+208	548	125.663
+209	549	119.944
+210	550	99.3358
+211	551	97.933
+212	552	90.9722
+213	553	95.8426
+214	554	98.1192
+215	555	85.5176
+216	556	75.8345
+217	557	81.5778
+218	558	74.6429
+219	559	70.0762
+220	560	67.8232
+221	561	73.6914
+222	562	80.9404
+223	563	76.7026
+224	564	78.016
+225	565	81.4396
+226	566	76.9275
+227	567	68.7328
+228	568	67.8327
+229	569	61.0302
+230	570	60.7604
+231	571	58.1095
+232	572	61.427
+233	573	70.1873
+234	574	69.9589
+235	575	84.606
+236	576	125.183
+237	577	141.244
+238	578	220.191
+239	579	284.576
+240	580	379.923
+241	581	530.392
+242	582	424.41
+243	583	420.943
+244	584	380.823
+245	585	343.446
+246	586	285.721
+247	587	207.305
+248	588	220.804
+249	589	152.014
+250	590	154.172
+251	591	137.864
+252	592	111.64
+253	593	101.088
+254	594	83.2161
+255	595	86.4831
+256	596	80.6118
+257	597	71.9245
+258	598	64.801
+259	599	60.2491
+260	600	51.3252
+</data>
+</table>
+<table>
+KamLAND_absorption_spectrum	26	2	17 Jan 2013 15:32:32
+geometry	475	125	893	220	
+header	1[X]	2[Y]
+ColWidth	100	100	
+<com>
+<col nr="1">
+col("2")*0.001
+</col>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel	/home/christoph/geant4/MyG4_applications/Sphere1-build/data/KamLAND/from_materials_dat/KamLAND_absorption_spectrum.txt	2
+<data>
+0	100	0.001
+1	200	0.001
+2	300	0.001
+3	350	0.027
+4	355	0.075
+5	360	0.65
+6	370	6.5
+7	380	10
+8	386	12
+9	395	20
+10	400	25
+11	406	25.3
+12	421	25.3
+13	446	25.8
+14	470	28.4
+15	500	30
+16	540	40
+17	555	20
+18	570	40
+19	590	40
+20	600	25
+21	630	6
+22	650	20
+23	680	15
+24	770	10
+25	800	1e-07
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	14 Jan 2013 11:29:22
+geometry	349	-1	569	474	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	6	5	551	411
+<PageGeometry>0.0106952	0.0117371	0.982175	0.964789</PageGeometry>
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	1	0	1	0	#0000ff	1	1	#a0a0a4	2	0.4	#0000ff	1	1	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	wavelength [nm]	att. length [m]		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	5124	4	5124
+AxesTitleDistance	2	2	8	2
+TitleFont	Sans	13	75	0	0	0
+ScaleFont0	Bitstream Charter	16	75	0	0	0
+ScaleFont1	Sans	11	75	0	0	0
+ScaleFont2	Bitstream Charter	16	75	0	0	0
+ScaleFont3	Sans	11	75	0	0	0
+AxisFont0	Bitstream Charter	14	75	0	0	0
+AxisFont1	Sans	11	50	0	0	0
+AxisFont2	Bitstream Charter	14	75	0	0	0
+AxisFont3	Sans	11	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#2c2c2c	#2c2c2c	#2c2c2c	#2c2c2c
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	absorption_file_toluene_1	absorption_file_toluene_3	2	1	#000000	0	1	5	1	#000000	#000000	0	#000000	14	1	2	0	0	260	1
+curve	KamLAND_absorption_spectrum_1	KamLAND_absorption_spectrum_2	2	1	#ff0000	0	1	5	1	#ff0000	#ff0000	0	#000000	14	1	2	0	0	25	1
+scale	0	1e-08	10000	0	7	5	1	0
+scale	1	1e-08	10000	0	7	5	1	0
+scale	2	0	900	0	10	5	0	0
+scale	3	0	900	0	10	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	3	3	3	3
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>50</x>
+<y>1.3397872193968e-05</y>
+<right>241.791044776119</right>
+<bottom>312.444956862639</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1) absorption length 
+(from DC simulation)
+\l(2) KamLAND MC
+</Text>
+<Font>Sans	10	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>255</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<multiLayer>
+Graph2	1	1	21 Jan 2013 12:42:44
+geometry	482	-47	697	546	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	6	5	679	483
+<PageGeometry>0.00870827	0.0100402	0.985486	0.96988</PageGeometry>
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	1	0	1	0	#0000ff	1	1	#a0a0a4	2	0.4	#0000ff	1	1	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	wavelength [nm]	att. length [m]		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	5124	4	5124
+AxesTitleDistance	2	2	8	2
+TitleFont	Sans	15	75	0	0	0
+ScaleFont0	Bitstream Charter	18	75	0	0	0
+ScaleFont1	Sans	13	75	0	0	0
+ScaleFont2	Bitstream Charter	18	75	0	0	0
+ScaleFont3	Sans	13	75	0	0	0
+AxisFont0	Bitstream Charter	16	75	0	0	0
+AxisFont1	Sans	13	50	0	0	0
+AxisFont2	Bitstream Charter	16	75	0	0	0
+AxisFont3	Sans	13	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#2c2c2c	#2c2c2c	#2c2c2c	#2c2c2c
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	KamLAND_absorption_spectrum_1	KamLAND_absorption_spectrum_2	2	1	#000000	0	1	5	1	#000000	#000000	0	#000000	14	1	2	0	0	25	1
+scale	0	1e-08	100	0	6	5	1	0
+scale	1	1e-08	100	0	6	5	1	0
+scale	2	100	750	0	8	5	0	0
+scale	3	100	750	0	8	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	3	3	3	3
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	0	1	0
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>194.5727482679</x>
+<y>2.4326293898144e-05</y>
+<right>685.450346420323</right>
+<bottom>2.04233312954976e-06</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1) KamLAND MC (materials.dat)
+</Text>
+<Font>Sans	15	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>255</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>
