@@ -73,8 +73,9 @@ int main(int argc,char** argv)
   TFile* f;
   //f = TFile::Open("sph_out_bkgC10_rndVtx_3p0mSphere_1.root", "recreate");
 //  f = TFile::Open("sph_out_promptC10_2p529MeV_center_5.root", "recreate");
-  f = TFile::Open("sph_out_1pos_0p79MeV_center_100_check.root", "recreate");
-  //f = TFile::Open("sph_out_topology90_100MeV_center_3.root", "recreate");
+//  f = TFile::Open("sph_out_1gamma_0p718MeV_center_1k_test3.root", "recreate");
+  f = TFile::Open("sph_out_1el_2p529MeV_center_100.root", "recreate");
+//    f = TFile::Open("sph_out_topology180_center_NoMultScat_100.root", "recreate");
 
   TTree* epgTree = new TTree("epgTree", "epgTree");
   epgTree->Branch("evt_num",&Ev.evt_num,"evt_num/I");
@@ -158,6 +159,17 @@ int main(int argc,char** argv)
   epgTree->Branch("trurDirY",&Ev.trueDirY,"trueDirY/D");
   epgTree->Branch("trurDirZ",&Ev.trueDirZ,"trueDirZ/D");
 
+  epgTree->Branch("gs1_r",&Ev.gs1_r,"gs1_r/F");
+  epgTree->Branch("gs1_e",&Ev.gs1_e,"gs1_e/F");
+  epgTree->Branch("gs2_r",&Ev.gs2_r,"gs2_r/F");
+  epgTree->Branch("gs2_e",&Ev.gs2_e,"gs2_e/F");
+  epgTree->Branch("gs3_r",&Ev.gs3_r,"gs3_r/F");
+  epgTree->Branch("gs3_e",&Ev.gs3_e,"gs3_e/F");
+  epgTree->Branch("gs4_r",&Ev.gs4_r,"gs4_r/F");
+  epgTree->Branch("gs4_e",&Ev.gs4_e,"gs4_e/F");
+
+  epgTree->Branch("primary_track_length",&Ev.primary_track_length,"primary_track_length/F");
+  epgTree->Branch("primary_track_time",&Ev.primary_track_time,"primary_track_time/F");
 
   // Choose the Random engine
   //

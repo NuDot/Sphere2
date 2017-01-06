@@ -21,7 +21,8 @@ void Sphere1TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
      (aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName())!="C11[0.0]" &&
      (aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName())!="Tl208[0.0]" &&
      (aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName())!="U238[0.0]" &&
-     (aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName())!="Th232[0.0]")
+     (aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName())!="Th232[0.0]" &&
+     (aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName())!="mu-")
   {
     G4cout<<"NAME = "<<aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName()<<G4endl;
     G4cout<<"Proc_name = "<<aTrack->GetCreatorProcess()->GetProcessName()<<G4endl;
@@ -124,6 +125,15 @@ void Sphere1TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
 //		bTrack->SetTrackStatus(fStopAndKill);
 	}
 */
+
+//  G4String pName = aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName();
+/*  if(aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName()!="gamma")
+  {
+    G4Track* bTrack;
+    bTrack = (G4Track*)aTrack;
+    bTrack->SetTrackStatus(fStopAndKill);
+  }
+*/
   G4String pName = aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName();
   if(pName=="e+"||pName=="e-"||pName=="gamma"||pName=="opticalphoton")
   {
@@ -138,6 +148,7 @@ void Sphere1TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
       tEv->epg_tIDi[tEv->N_epg_i]=aTrack->GetTrackID();
       tEv->epg_pIDi[tEv->N_epg_i]=aTrack->GetParentID();
       tEv->epg_qi[tEv->N_epg_i]=aTrack->GetDynamicParticle()->GetCharge();
+//      tEv->epg_pdgi[tEv->N_epg_i]=aTrack->GetDynamicParticle()->GetPDGEncoding();
       tEv->epg_ti[tEv->N_epg_i]=aTrack->GetGlobalTime();
       tEv->epg_xi[tEv->N_epg_i]=aTrack->GetPosition().x();
       tEv->epg_yi[tEv->N_epg_i]=aTrack->GetPosition().y();
@@ -154,6 +165,9 @@ void Sphere1TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
         tEv->epg_isOPi[tEv->N_epg_i]=1;
         if(aTrack->GetCreatorProcess()->GetProcessName()=="Cerenkov")
   	  tEv->epg_isChei[tEv->N_epg_i]=1;
+//AE (05/13/2016) Something is completely messed up in Geant4 Tracking - some of the photons marked as Cerenkov
+//are actually scintillation - they have long emission time and spectrum characteristic to scintillation
+//Geant 4 Stepping seems to be ok, at least for the photons that make it to the sphere.
 
 //	G4Track* bTrack;
 //	bTrack = (G4Track*)aTrack;

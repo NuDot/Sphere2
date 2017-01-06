@@ -52,6 +52,7 @@ struct event
   int epg_isOPf[MAX_epg];
   int epg_isChef[MAX_epg];
 
+
   float edep;
   float edep_cor;
 
@@ -86,6 +87,19 @@ struct event
   double trueDirY;
   double trueDirZ;
 
+  int Ns;
+  float gs4_r;
+  float gs1_r;
+  float gs2_r;
+  float gs3_r;
+  float gs4_e;
+  float gs1_e;
+  float gs2_e;
+  float gs3_e;
+
+  float primary_track_length;
+  float primary_track_time;
+ 
 };
 
 #endif

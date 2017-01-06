@@ -100,6 +100,16 @@ void Sphere1SteppingAction::UserSteppingAction(const G4Step* step)
 //          <<"   tot_edep = "<<sEvt->edep<<G4endl;
   }
 
+//  step->GetTrack()->AddTrackLength(step->GetStepLength());
+//  if(step->GetTrack()->GetDynamicParticle()->GetDefinition()->GetParticleName()=="e-" && step->GetTrack()->GetTrackID()==1)
+  if(step->GetTrack()->GetTrackID()==1)
+  {
+    sEvt->primary_track_length += step->GetStepLength();
+    sEvt->primary_track_time += step->GetDeltaTime();
+  }
+  
+
+
   //get time stamp for neutrino (C10 decay time)
 /*  if(step->GetTrack()->GetDynamicParticle()->GetDefinition()->GetParticleName()=="nu_e")
   {
@@ -332,6 +342,79 @@ sEvt->N_phot++;
         }
              
     }
+/*
+  float gs4_r;
+  float gs1_r;
+  float gs2_r;
+  float gs3_r;
+  float gs4_e;
+  float gs1_e;
+  float gs2_e;
+  float gs3_e;
+*/
+
+  bool new_evt=false;
+  if(step->GetTrack()->GetDynamicParticle()->GetDefinition()->GetParticleName()=="gamma" && step->GetTrack()->GetTrackID()==1)
+  {
+//    G4cout<<"Now PRESTEP: "<<G4endl;
+    if(step->GetPreStepPoint()->GetPosition().r()<0.001) 
+    {
+      sEvt->Ns=0;
+      sEvt->gs1_r=0;
+      sEvt->gs1_e=0;
+      sEvt->gs2_r=0;
+      sEvt->gs2_e=0;
+      sEvt->gs3_r=0;
+      sEvt->gs3_e=0;
+      sEvt->gs4_r=0;
+      sEvt->gs4_e=0;
+    }
+/*    if(new_evt)
+    {
+      sEvt->gs1_r=0; sEvt->gs2_r=0; sEvt->gs3_r=0; sEvt->gs4_r=0;
+      sEvt->gs1_e=0; sEvt->gs2_e=0; sEvt->gs3_e=0; sEvt->gs4_e=0;
+      sEvt->Ns=0;
+      G4cout<<"Now STEP#0: "<<G4endl;
+    }
+    else
+    {
+*/
+      sEvt->Ns++;
+      if(sEvt->Ns==1)
+      {
+        sEvt->gs1_r = step->GetPostStepPoint()->GetPosition().r();
+	sEvt->gs1_e = step->GetPostStepPoint()->GetKineticEnergy();
+//	G4cout<<"Now STEP#1: "<<G4endl;
+      }
+
+      if(sEvt->Ns==2)
+      {
+//	G4cout<<"Now STEP#2: "<<G4endl;
+        sEvt->gs2_r = step->GetPostStepPoint()->GetPosition().r();
+        sEvt->gs2_e = step->GetPostStepPoint()->GetKineticEnergy();
+      }
+
+      if(sEvt->Ns==3)
+      {
+//	G4cout<<"Now STEP#3: "<<G4endl;
+        sEvt->gs3_r = step->GetPostStepPoint()->GetPosition().r();
+        sEvt->gs3_e = step->GetPostStepPoint()->GetKineticEnergy();
+      }
+
+      if(sEvt->Ns==4)
+      {
+        sEvt->gs4_r = step->GetPostStepPoint()->GetPosition().r();
+        sEvt->gs4_e = step->GetPostStepPoint()->GetKineticEnergy();
+        G4cout<<"Now STEP#4: "<<G4endl;
+        G4cout<<sEvt->gs1_r<<"     "<<sEvt->gs2_r<<"     "<<sEvt->gs3_r<<G4endl;
+        G4cout<<sEvt->gs1_e<<"     "<<sEvt->gs2_e<<"     "<<sEvt->gs3_e<<G4endl;
+      }
+
+    //}
+  }
+
+
+ 
   return;
 }
 

@@ -91,6 +91,8 @@ void Sphere1EventAction::BeginOfEventAction(const G4Event* event)
   eEvt->N_phot=0;
   eEvt->edep=0;
   eEvt->edep_cor=0;
+  eEvt->primary_track_length=0;
+  eEvt->primary_track_time=0;
 
   G4int eventNb = event->GetEventID();
   if (eventNb%fPrintModulo == 0) { 
