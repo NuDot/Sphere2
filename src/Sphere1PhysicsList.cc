@@ -277,7 +277,7 @@ void Sphere1PhysicsList::ConstructEM()
     } else if (particleName == "e-") {
     //electron
       // Construct processes for electron
-      pmanager->AddProcess(new G4eMultipleScattering(),-1, 1, 1);
+      pmanager->AddProcess(new G4eMultipleScattering(),-1, 1, 1); //turn off Mult Scat here if needed
       pmanager->AddProcess(new G4eIonisation(),       -1, 2, 2);
       pmanager->AddProcess(new G4eBremsstrahlung(),   -1, 3, 3);
 
