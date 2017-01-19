@@ -41,7 +41,6 @@
 #include "Randomize.hh"
 #include "G4Event.hh"
 
-
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 Sphere1PrimaryGeneratorAction* Sphere1PrimaryGeneratorAction::fgInstance = 0;
@@ -117,6 +116,7 @@ Sphere1PrimaryGeneratorAction::~Sphere1PrimaryGeneratorAction()
 
 void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
+  double pi = CLHEP::pi;
   //this function is called at the begining of each event
   //
 

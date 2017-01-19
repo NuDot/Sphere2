@@ -4,7 +4,7 @@ G4EXLIB := true
 
 ifndef G4INSTALL
 #  G4INSTALL = ../../..
-  G4INSTALL=/code/geant4.9.6.4/share/Geant4-9.6.4/geant4make
+  G4INSTALL=/home/taritree/software/geant4.10.03/release/share/Geant4-10.3.0/geant4make
 endif
 
 .PHONY: all

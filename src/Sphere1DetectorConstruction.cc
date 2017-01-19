@@ -48,6 +48,7 @@
 #include <fstream>
 #include <sstream>
 
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 Sphere1DetectorConstruction::Sphere1DetectorConstruction()
@@ -63,6 +64,7 @@ Sphere1DetectorConstruction::~Sphere1DetectorConstruction()
 
 G4VPhysicalVolume* Sphere1DetectorConstruction::Construct()
 { 
+  double pi = CLHEP::pi;
 
   G4double a, z, density, fractionmass;
   G4int nelements;
