@@ -332,10 +332,13 @@ void Sphere1PhysicsList::ConstructOp()
   theBoundaryProcess           = new G4OpBoundaryProcess();
 
   //just dump information, not needed for simulation itself
-  G4cout << "Dump the Cerenkov physics table: " << G4endl;
-  G4cout << "Entries: " << theCerenkovProcess->GetPhysicsTable()->entries() << G4endl;  
-  theCerenkovProcess->DumpPhysicsTable();
-  G4cout << "-------------------------------------- " << G4endl;
+  //G4cout << "Dump the Cerenkov physics table: " << G4endl;
+  //G4cout << "CherenkovProcess: " << theCerenkovProcess << G4endl;  
+  //G4cout << "Cherenkov Process Name: " << theCerenkovProcess->GetProcessName() << G4endl;  
+  //G4cout << "PhysicsTable: " << theCerenkovProcess->GetPhysicsTable() << G4endl;  
+  //G4cout << "Entries: " << theCerenkovProcess->GetPhysicsTable()->entries() << G4endl;  
+  //theCerenkovProcess->DumpPhysicsTable();
+  //G4cout << "-------------------------------------- " << G4endl;
   //theScintillationProcess->DumpPhysicsTable();
   //theRayleighScatteringProcess->DumpPhysicsTable();
 
