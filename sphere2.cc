@@ -183,6 +183,7 @@ int main(int argc,char** argv)
   // Construct the default run manager
   //
   G4RunManager * runManager = new G4RunManager;
+  G4cout << "runManager allocated!" << G4endl;
 
   // Set mandatory initialization classes
   //
@@ -200,13 +201,16 @@ int main(int argc,char** argv)
   //RegisterPhysics( opticalPhysics ); //***
   // or 2) Physics List copied from ExN06
   G4VUserPhysicsList* physicsList = new Sphere1PhysicsList; 
+  G4cout << "physicsList allocated!" << G4endl;
 
 
   physicsList->SetVerboseLevel(1);
   runManager->SetUserInitialization(physicsList);
+  G4cout << "physicsList set as user initialization!" << G4endl;
     
   // Primary generator action
   runManager->SetUserAction(new Sphere1PrimaryGeneratorAction(&Ev));
+  G4cout << "PrimaryGeneratorAction set!" << G4endl;
 
   // Set user action classes
   //
@@ -224,9 +228,12 @@ int main(int argc,char** argv)
   // Stacking action
   runManager->SetUserAction(new Sphere1StackingAction());
  
+  G4cout << "All user actions set!" << G4endl;
+
   // Initialize G4 kernel
   //
   runManager->Initialize();
+  G4cout << "runManager Initialized!" << G4endl;
   
 #ifdef G4VIS_USE
   // Initialize visualization
