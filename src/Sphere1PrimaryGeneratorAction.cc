@@ -208,7 +208,7 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   pEv->trueVtxY = pPos.y()/10;
   pEv->trueVtxZ = pPos.z()/10;
 //  SetOptPhotonPolar(); //random polarization, here one can also enter a fixed angle or a special polarization angle distribution
-  fParticleGun->GeneratePrimaryVertex(anEvent); //!!!!!Don't comment this twice in Gun mode!!!!!!!!!!1
+  //fParticleGun->GeneratePrimaryVertex(anEvent); //!!!!!Don't comment this twice in Gun mode!!!!!!!!!!1
 
 /*
   G4ParticleDefinition* ion
@@ -222,13 +222,13 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 
 //  fParticleGun->GeneratePrimaryVertex(anEvent); //!!!!!Don't comment this twice in Gun mode!!!!!!!!!!
 
-/*
+///*
   //HEPEvt generator
   //?
   //HEPEvt->SetParticlePosition(G4ThreeVector(2500.*mm,2500.*mm,2500.*mm));
   HEPEvt->SetParticlePosition(G4ThreeVector(x0,y0,z0));
   HEPEvt->GeneratePrimaryVertex(anEvent);
-*/
+//*/
 
 }
 
