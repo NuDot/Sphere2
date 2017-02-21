@@ -42,6 +42,21 @@
 #include "G4Event.hh"
 
 const int USE_HEPEVT_INTERFACE = 1;
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p7MeV_pos_0p718MeV_gamma_1k.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_pxpx_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Se_0vbb_1e6.EVT";
+const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Te130_0vbb_1e6.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology0_pxpx_100p0MeVEach_1k.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology0_pxpx_10p0MeVEach_1k.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology180_pxmx_100p0MeVEach_1k.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology180_pxmx_10p0MeVEach_1k.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology180_pxmx_2p529MeVTot_1k.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology180_pxmx_5p0MeVEach_1k.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology90_pxpy_100p0MeVEach_1k.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology90_pxpy_10p0MeVEach_1k.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology90_pxpy_2p529MeVTot_1k.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology90_pxpy_5p0MeVEach_1k.EVT";
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -93,23 +108,8 @@ Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv)
   if (USE_HEPEVT_INTERFACE) {
     //or alternatively use HEPEvt interface
 
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p7MeV_pos_0p718MeV_gamma_1k.EVT";
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/C10_prompt_pxpx_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/Se_0vbb_1e6.EVT";
-    const char* filename = "/mnt/disk0/kamland/spherical_data/Te130_0vbb_1e6.EVT";
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/topology0_pxpx_100p0MeVEach_1k.EVT";
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/topology0_pxpx_10p0MeVEach_1k.EVT";
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/topology180_pxmx_100p0MeVEach_1k.EVT";
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/topology180_pxmx_10p0MeVEach_1k.EVT";
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/topology180_pxmx_2p529MeVTot_1k.EVT";
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/topology180_pxmx_5p0MeVEach_1k.EVT";
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/topology90_pxpy_100p0MeVEach_1k.EVT";
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/topology90_pxpy_10p0MeVEach_1k.EVT";
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/topology90_pxpy_2p529MeVTot_1k.EVT";
-    //const char* filename = "/mnt/disk0/kamland/spherical_data/topology90_pxpy_5p0MeVEach_1k.EVT";
-    G4cout<<"INPUT_FILE = "<<filename<<G4endl;
-    HEPEvt = new G4HEPEvtInterface(filename);
+    G4cout<<"INPUT_FILE = "<<HEPEVT_FILE<<G4endl;
+    HEPEvt = new G4HEPEvtInterface(HEPEVT_FILE);
   }
 
   fgInstance = this;
