@@ -186,9 +186,9 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 //  G4double dirx = sin(theta)*cos(phi);
 //  G4double diry = sin(theta)*sin(phi);
 //  G4double dirz = cos(theta);  
-  G4double dirx = 1.0;//sin(theta)*cos(phi);
-  G4double diry = 0.0;// sin(theta)*sin(phi);
-  G4double dirz = 0.0;//cos(theta);  
+  G4double dirx = sin(theta)*cos(phi);//1.0;
+  G4double diry = sin(theta)*sin(phi);//0.0;
+  G4double dirz = cos(theta);//0.0;
   fParticleGun->SetParticleMomentumDirection(G4ThreeVector(dirx,diry,dirz));  
 
 
