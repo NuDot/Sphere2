@@ -25,7 +25,10 @@ void Sphere1TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
      (aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName())!="mu-")
   {
     G4cout<<"NAME = "<<aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName()<<G4endl;
+    G4cout<<"Proc_name = "<<aTrack->GetCreatorProcess()<<G4endl;
+    G4cout<<"this works"<<aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName()<<G4endl;
     G4cout<<"Proc_name = "<<aTrack->GetCreatorProcess()->GetProcessName()<<G4endl;
+    G4cout<<"not this" << G4endl;
     G4cout<<"vtx_pos: r = "<<sqrt(aTrack->GetVertexPosition().getX()*aTrack->GetVertexPosition().getX()+
                                   aTrack->GetVertexPosition().getY()*aTrack->GetVertexPosition().getY()+
 				  aTrack->GetVertexPosition().getZ()*aTrack->GetVertexPosition().getZ() )<<G4endl;

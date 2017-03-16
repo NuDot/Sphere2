@@ -110,6 +110,7 @@ void Sphere1EventAction::BeginOfEventAction(const G4Event* event)
   SetReconstructedVertex(true_vertex[0],true_vertex[1],true_vertex[2]);
 
   G4int Nprimaries = event->GetPrimaryVertex()->GetNumberOfParticle();
+
   for(G4int i=0;i!=Nprimaries;++i)
   {
     G4PrimaryParticle* primary = event->GetPrimaryVertex()->GetPrimary(i); 
@@ -121,10 +122,9 @@ void Sphere1EventAction::BeginOfEventAction(const G4Event* event)
     //G4cout << "The momentum is " << event->GetPrimaryVertex()->GetPrimary()->GetMomentum() << G4endl;
     G4cout << "The momentum is (" << primary->GetPx() << "," << primary->GetPy() << "," <<primary->GetPz() << ")." << G4endl;  
     G4cout << "The polarization is " << primary->GetPolarization() << G4endl;
-  }
+   }
    // Reset accounted energy in stepping action
   Sphere1SteppingAction::Instance()->Reset();
-  
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

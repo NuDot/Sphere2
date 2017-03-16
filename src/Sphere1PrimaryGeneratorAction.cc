@@ -40,13 +40,14 @@
 #include "G4SystemOfUnits.hh"
 #include "Randomize.hh"
 #include "G4Event.hh"
+#include "G4IonTable.hh"
 
-const int USE_HEPEVT_INTERFACE = 1;
-//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
+const int USE_HEPEVT_INTERFACE = 0;
+const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p7MeV_pos_0p718MeV_gamma_1k.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_pxpx_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Se_0vbb_1e6.EVT";
-const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Te130_0vbb_1e6.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Te130_0vbb_1e6.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology0_pxpx_100p0MeVEach_1k.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology0_pxpx_10p0MeVEach_1k.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology180_pxmx_100p0MeVEach_1k.EVT";
@@ -89,12 +90,10 @@ Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv)
     G4String particleName;
     //?
     G4ParticleDefinition* particle = particleTable->FindParticle(particleName="e-");
-    //G4ParticleDefinition* particle = particleTable->FindParticle(particleName="opticalphoton");
     fParticleGun->SetParticleDefinition(particle);
-    //?
     fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1.,0.,0.));
-    //?
-    fParticleGun->SetParticleEnergy(2.529*MeV);//(0.5*2.529*MeV);
+   // fParticleGun->SetParticleEnergy(0*MeV);
+   // fParticleGun->SetParticleEnergy(2.529*MeV);//(0.5*2.529*MeV);
   //  fParticleGun->SetParticleEnergy((2.529-0.511*2-0.718)*MeV);
   //  fParticleGun->SetParticleEnergy(0.718*MeV);
   //  fParticleGun->SetParticleEnergy(0.79*MeV);
@@ -210,6 +209,15 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   pEv->trueVtxZ = pPos.z()/10;
 //  SetOptPhotonPolar(); //random polarization, here one can also enter a fixed angle or a special polarization angle distribution
   if (!USE_HEPEVT_INTERFACE) {
+    G4IonTable* ionTable = G4IonTable::GetIonTable();
+    G4String particleName;
+    //?
+    G4ParticleDefinition* ion = G4IonTable::GetIonTable()->GetIon(6,10,0);
+    //G4ParticleDefinition* particle = particleTable->FindParticle(particleName="opticalphoton");
+    fParticleGun->SetParticleDefinition(ion);
+    //?
+    fParticleGun->SetParticleCharge(0.);
+    fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1.,0.,0.));
     fParticleGun->GeneratePrimaryVertex(anEvent); //!!!!!Don't comment this twice in Gun mode!!!!!!!!!!1
   }
 
