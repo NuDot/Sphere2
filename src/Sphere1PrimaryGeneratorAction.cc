@@ -217,7 +217,7 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
     fParticleGun->SetParticleDefinition(ion);
     //?
     fParticleGun->SetParticleCharge(0.);
-    fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1.,0.,0.));
+   // fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,0.));
     fParticleGun->GeneratePrimaryVertex(anEvent); //!!!!!Don't comment this twice in Gun mode!!!!!!!!!!1
   }
 
