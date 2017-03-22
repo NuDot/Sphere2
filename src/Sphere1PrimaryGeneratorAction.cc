@@ -89,9 +89,9 @@ Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv)
     G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
     G4String particleName;
     //?
-    G4ParticleDefinition* particle = particleTable->FindParticle(particleName="e-");
-    fParticleGun->SetParticleDefinition(particle);
-    fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1.,0.,0.));
+//   G4ParticleDefinition* particle = particleTable->FindParticle(particleName="e-");
+//    fParticleGun->SetParticleDefinition(particle);
+//    fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1.,0.,0.));
    // fParticleGun->SetParticleEnergy(0*MeV);
    // fParticleGun->SetParticleEnergy(2.529*MeV);//(0.5*2.529*MeV);
   //  fParticleGun->SetParticleEnergy((2.529-0.511*2-0.718)*MeV);
