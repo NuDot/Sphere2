@@ -26,9 +26,8 @@ void Sphere1TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
   {
     G4cout<<"NAME = "<<aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName()<<G4endl;
     G4cout<<"Proc_name = "<<aTrack->GetCreatorProcess()<<G4endl;
-    G4cout<<"this works"<<aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName()<<G4endl;
+    G4cout<<aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName()<<G4endl;
    // G4cout<<"Proc_name = "<<aTrack->GetCreatorProcess()->GetProcessName()<<G4endl;
-    G4cout<<"not this" << G4endl;
     G4cout<<"vtx_pos: r = "<<sqrt(aTrack->GetVertexPosition().getX()*aTrack->GetVertexPosition().getX()+
                                   aTrack->GetVertexPosition().getY()*aTrack->GetVertexPosition().getY()+
 				  aTrack->GetVertexPosition().getZ()*aTrack->GetVertexPosition().getZ() )<<G4endl;
@@ -37,7 +36,6 @@ void Sphere1TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
 
   if((aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName())=="C10")
   {
-    G4cout<<"we're in here"<<G4endl;
     tEv->C10_0_ti=aTrack->GetGlobalTime();
     int prec=G4cout.precision();
     G4cout.precision(15);

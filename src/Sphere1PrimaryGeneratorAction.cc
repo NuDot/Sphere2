@@ -92,7 +92,7 @@ Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv)
 //   G4ParticleDefinition* particle = particleTable->FindParticle(particleName="e-");
 //    fParticleGun->SetParticleDefinition(particle);
 //    fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1.,0.,0.));
-   // fParticleGun->SetParticleEnergy(0*MeV);
+    fParticleGun->SetParticleEnergy(0*MeV);
    // fParticleGun->SetParticleEnergy(2.529*MeV);//(0.5*2.529*MeV);
   //  fParticleGun->SetParticleEnergy((2.529-0.511*2-0.718)*MeV);
   //  fParticleGun->SetParticleEnergy(0.718*MeV);
@@ -163,13 +163,14 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   G4double r_vtx = G4UniformRand()*3000;
   G4double phi_vtx = G4UniformRand()*2.0*pi-pi;
   G4double theta_vtx = acos(2.0*G4UniformRand() - 1.0);
-//  G4double x0 = r_vtx*sin(theta_vtx)*cos(phi_vtx);
-//  G4double y0 = r_vtx*sin(theta_vtx)*sin(phi_vtx);
-//  G4double z0 = r_vtx*cos(theta_vtx);
 
-  G4double x0 = 0.0;//r_vtx*sin(theta_vtx)*cos(phi_vtx);
-  G4double y0 = 0.0;//r_vtx*sin(theta_vtx)*sin(phi_vtx);
-  G4double z0 = 0.0;//r_vtx*cos(theta_vtx);
+  G4double x0 = r_vtx*sin(theta_vtx)*cos(phi_vtx);
+  G4double y0 = r_vtx*sin(theta_vtx)*sin(phi_vtx);
+  G4double z0 = r_vtx*cos(theta_vtx);
+
+ // G4double x0 = 0.0;//r_vtx*sin(theta_vtx)*cos(phi_vtx);
+ // G4double y0 = 0.0;//r_vtx*sin(theta_vtx)*sin(phi_vtx);
+ // G4double z0 = 0.0;//r_vtx*cos(theta_vtx);
    
 //  G4double x0 = G4UniformRand()*2*2600-2600;// 4500.;//-6500.000;
 //  G4double y0 = G4UniformRand()*2*2600-2600;// 0.;

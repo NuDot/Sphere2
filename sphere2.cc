@@ -61,6 +61,8 @@
 #include "TROOT.h"
 #include "TTree.h"
 #include "TFile.h"
+#include <iostream>
+#include <string>
 
 event Ev; 
 
@@ -68,13 +70,16 @@ event Ev;
 
 int main(int argc,char** argv)
 {
-
+  std::string mystr;
+  std::cout << "Enter the filename:";
+  getline (std::cin, mystr);
+  const char * filename = mystr.c_str();
   TROOT root("", "");
   TFile* f;
   //f = TFile::Open("sph_out_bkgC10_rndVtx_3p0mSphere_1.root", "recreate");
 //  f = TFile::Open("sph_out_promptC10_2p529MeV_center_5.root", "recreate");
 //  f = TFile::Open("sph_out_1gamma_0p718MeV_center_1k_test3.root", "recreate");
-  f = TFile::Open("sph_out_1el_2p529MeV_center_100.root", "recreate");
+  f = TFile::Open(filename, "recreate");
 //    f = TFile::Open("sph_out_topology180_center_NoMultScat_100.root", "recreate");
 
   TTree* epgTree = new TTree("epgTree", "epgTree");
