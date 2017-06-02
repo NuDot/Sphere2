@@ -29,7 +29,7 @@
 #/gun/energy 1.54975*1e-06 MeV
 
 /gun/particle ion
-/gun/ion 6 10
+/gun/ion 83 214
 
 /run/beamOn 1000
 
