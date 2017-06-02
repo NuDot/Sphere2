@@ -1,33 +1,3 @@
-//
-// ********************************************************************
-// * License and Disclaimer                                           *
-// *                                                                  *
-// * The  Geant4 software  is  copyright of the Copyright Holders  of *
-// * the Geant4 Collaboration.  It is provided  under  the terms  and *
-// * conditions of the Geant4 Software License,  included in the file *
-// * LICENSE and available at  http://cern.ch/geant4/license .  These *
-// * include a list of copyright holders.                             *
-// *                                                                  *
-// * Neither the authors of this software system, nor their employing *
-// * institutes,nor the agencies providing financial support for this *
-// * work  make  any representation or  warranty, express or implied, *
-// * regarding  this  software system or assume any liability for its *
-// * use.  Please see the license in the file  LICENSE  and URL above *
-// * for the full disclaimer and the limitation of liability.         *
-// *                                                                  *
-// * This  code  implementation is the result of  the  scientific and *
-// * technical work of the GEANT4 collaboration.                      *
-// * By using,  copying,  modifying or  distributing the software (or *
-// * any work based  on the software)  you  agree  to acknowledge its *
-// * use  in  resulting  scientific  publications,  and indicate your *
-// * acceptance of all terms of the Geant4 Software license.          *
-// ********************************************************************
-//
-// $Id$
-//
-/// \file Sphere1PrimaryGeneratorAction.cc
-/// \brief Implementation of the Sphere1PrimaryGeneratorAction class
-
 #include "Sphere1PrimaryGeneratorAction.hh"
 
 #include "G4LogicalVolumeStore.hh"
@@ -92,7 +62,7 @@ Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv)
 //   G4ParticleDefinition* particle = particleTable->FindParticle(particleName="e-");
 //    fParticleGun->SetParticleDefinition(particle);
 //    fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1.,0.,0.));
-   // fParticleGun->SetParticleEnergy(0*MeV);
+    fParticleGun->SetParticleEnergy(0*MeV);
    // fParticleGun->SetParticleEnergy(2.529*MeV);//(0.5*2.529*MeV);
   //  fParticleGun->SetParticleEnergy((2.529-0.511*2-0.718)*MeV);
   //  fParticleGun->SetParticleEnergy(0.718*MeV);
@@ -153,7 +123,6 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
     G4cerr << "Perhaps you have changed geometry." << G4endl;
     G4cerr << "The gun will be place in the center." << G4endl;
   }
-
   G4double size = 0.8; 
   G4double x0 = size * envSizeXY * (G4UniformRand()-0.5);
   G4double y0 = size * envSizeXY * (G4UniformRand()-0.5);
@@ -163,13 +132,14 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   G4double r_vtx = G4UniformRand()*3000;
   G4double phi_vtx = G4UniformRand()*2.0*pi-pi;
   G4double theta_vtx = acos(2.0*G4UniformRand() - 1.0);
-//  G4double x0 = r_vtx*sin(theta_vtx)*cos(phi_vtx);
-//  G4double y0 = r_vtx*sin(theta_vtx)*sin(phi_vtx);
-//  G4double z0 = r_vtx*cos(theta_vtx);
 
-  G4double x0 = 0.0;//r_vtx*sin(theta_vtx)*cos(phi_vtx);
-  G4double y0 = 0.0;//r_vtx*sin(theta_vtx)*sin(phi_vtx);
-  G4double z0 = 0.0;//r_vtx*cos(theta_vtx);
+  G4double x0 = r_vtx*sin(theta_vtx)*cos(phi_vtx);
+  G4double y0 = r_vtx*sin(theta_vtx)*sin(phi_vtx);
+  G4double z0 = r_vtx*cos(theta_vtx);
+
+ // G4double x0 = 0.0;//r_vtx*sin(theta_vtx)*cos(phi_vtx);
+ // G4double y0 = 0.0;//r_vtx*sin(theta_vtx)*sin(phi_vtx);
+ // G4double z0 = 0.0;//r_vtx*cos(theta_vtx);
    
 //  G4double x0 = G4UniformRand()*2*2600-2600;// 4500.;//-6500.000;
 //  G4double y0 = G4UniformRand()*2*2600-2600;// 0.;
@@ -197,12 +167,13 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 //  G4cout << "G4ThreeVector(dirx,diry,dirz)= " << G4ThreeVector(dirx,diry,dirz) << G4endl;
 //  G4cout << "phi= " << phi << ", theta= " << theta << G4endl;
 //  G4cout << "-------------------------------" << G4endl;
+ 
   G4ParticleMomentum pMomentum = fParticleGun->GetParticleMomentumDirection();
   pEv->trueDirX = pMomentum.x();
   pEv->trueDirY = pMomentum.y();
   pEv->trueDirZ = pMomentum.z();
 
-  fParticleGun->SetParticlePosition(G4ThreeVector(x0,y0,z0));
+  fParticleGun->SetParticlePosition(G4ThreeVector(0,0,0));
   G4ThreeVector pPos =  fParticleGun->GetParticlePosition();
   pEv->trueVtxX = pPos.x()/10;
   pEv->trueVtxY = pPos.y()/10;
@@ -212,9 +183,9 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
     G4IonTable* ionTable = G4IonTable::GetIonTable();
     G4String particleName;
     //?
-    G4ParticleDefinition* ion = G4IonTable::GetIonTable()->GetIon(6,10,0);
-    //G4ParticleDefinition* particle = particleTable->FindParticle(particleName="opticalphoton");
-    fParticleGun->SetParticleDefinition(ion);
+  //G4ParticleDefinition* ion = G4IonTable::GetIonTable()->GetIon(6,10,0);
+  //G4ParticleDefinition* particle = particleTable->FindParticle(particleName="opticalphoton");
+  //fParticleGun->SetParticleDefinition(ion);
     //?
     fParticleGun->SetParticleCharge(0.);
    // fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,0.));
@@ -275,4 +246,3 @@ void Sphere1PrimaryGeneratorAction::SetOptPhotonPolar(G4double angle)
 }
 
  //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-

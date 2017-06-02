@@ -1,38 +1,3 @@
-//
-// ********************************************************************
-// * License and Disclaimer                                           *
-// *                                                                  *
-// * The  Geant4 software  is  copyright of the Copyright Holders  of *
-// * the Geant4 Collaboration.  It is provided  under  the terms  and *
-// * conditions of the Geant4 Software License,  included in the file *
-// * LICENSE and available at  http://cern.ch/geant4/license .  These *
-// * include a list of copyright holders.                             *
-// *                                                                  *
-// * Neither the authors of this software system, nor their employing *
-// * institutes,nor the agencies providing financial support for this *
-// * work  make  any representation or  warranty, express or implied, *
-// * regarding  this  software system or assume any liability for its *
-// * use.  Please see the license in the file  LICENSE  and URL above *
-// * for the full disclaimer and the limitation of liability.         *
-// *                                                                  *
-// * This  code  implementation is the result of  the  scientific and *
-// * technical work of the GEANT4 collaboration.                      *
-// * By using,  copying,  modifying or  distributing the software (or *
-// * any work based  on the software)  you  agree  to acknowledge its *
-// * use  in  resulting  scientific  publications,  and indicate your *
-// * acceptance of all terms of the Geant4 Software license.          *
-// ********************************************************************
-//
-// $Id$
-//
-/// \file sphere1.cc
-/// \brief Main program of the Sphere1 application
-
-//?
-//#include "QGSP_BERT_HP.hh" //***
-//#include "G4OpticalPhysics.hh" //***
-//#include "G4OpticalProcessIndex.hh" //***
-//#include "G4VModularPhysicsList.hh" //***
 #include "Sphere1DetectorConstruction.hh"
 #include "Sphere1PrimaryGeneratorAction.hh"
 #include "Sphere1RunAction.hh"
@@ -74,7 +39,7 @@ int main(int argc,char** argv)
   //f = TFile::Open("sph_out_bkgC10_rndVtx_3p0mSphere_1.root", "recreate");
 //  f = TFile::Open("sph_out_promptC10_2p529MeV_center_5.root", "recreate");
 //  f = TFile::Open("sph_out_1gamma_0p718MeV_center_1k_test3.root", "recreate");
-  f = TFile::Open("sph_out_1el_2p529MeV_center_100.root", "recreate");
+f = TFile::Open("/mnt/disk0/kamland/myunus/c10_sph_out_1el_2p529MeV_center_100.root","recreate");
 //    f = TFile::Open("sph_out_topology180_center_NoMultScat_100.root", "recreate");
 
   TTree* epgTree = new TTree("epgTree", "epgTree");
@@ -109,8 +74,6 @@ int main(int argc,char** argv)
 
   epgTree->Branch("N_epg_f",&Ev.N_epg_f,"N_epg_f/I");
   epgTree->Branch("epg_pIDf",&Ev.epg_pIDf,"epg_pIDf[N_epg_f]/I");
-  epgTree->Branch("epg_tIDf",&Ev.epg_tIDf,"epg_tIDf[N_epg_f]/I");
-  epgTree->Branch("epg_qf",&Ev.epg_qf,"epg_qf[N_epg_f]/F");
   epgTree->Branch("epg_tf",&Ev.epg_tf,"epg_tf[N_epg_f]/D");
   epgTree->Branch("epg_ltf",&Ev.epg_ltf,"epg_ltf[N_epg_f]/D");
   epgTree->Branch("epg_xf",&Ev.epg_xf,"epg_xf[N_epg_f]/F");
@@ -183,7 +146,6 @@ int main(int argc,char** argv)
   // Construct the default run manager
   //
   G4RunManager * runManager = new G4RunManager;
-  G4cout << "runManager allocated!" << G4endl;
 
   // Set mandatory initialization classes
   //
@@ -201,16 +163,13 @@ int main(int argc,char** argv)
   //RegisterPhysics( opticalPhysics ); //***
   // or 2) Physics List copied from ExN06
   G4VUserPhysicsList* physicsList = new Sphere1PhysicsList; 
-  G4cout << "physicsList allocated!" << G4endl;
 
 
   physicsList->SetVerboseLevel(1);
   runManager->SetUserInitialization(physicsList);
-  G4cout << "physicsList set as user initialization!" << G4endl;
     
   // Primary generator action
   runManager->SetUserAction(new Sphere1PrimaryGeneratorAction(&Ev));
-  G4cout << "PrimaryGeneratorAction set!" << G4endl;
 
   // Set user action classes
   //
@@ -228,12 +187,9 @@ int main(int argc,char** argv)
   // Stacking action
   runManager->SetUserAction(new Sphere1StackingAction());
  
-  G4cout << "All user actions set!" << G4endl;
-
   // Initialize G4 kernel
   //
   runManager->Initialize();
-  G4cout << "runManager Initialized!" << G4endl;
   
 #ifdef G4VIS_USE
   // Initialize visualization
@@ -245,6 +201,7 @@ int main(int argc,char** argv)
 
   // Get the pointer to the User Interface manager
   G4UImanager* UImanager = G4UImanager::GetUIpointer();
+
 
   if (argc!=1) {
     // batch mode
