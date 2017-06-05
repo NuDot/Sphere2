@@ -34,6 +34,12 @@ void Sphere1TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
 				  aTrack->GetVertexPosition().getZ()*aTrack->GetVertexPosition().getZ() )<<G4endl;
   }
 
+  if((aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName())=="Pb210")
+  {
+    G4Track* bTrack; 
+    bTrack = (G4Track*)aTrack; 
+    bTrack->SetTrackStatus(fStopAndKill);
+  }
 
   if((aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName())=="C10")
   {
