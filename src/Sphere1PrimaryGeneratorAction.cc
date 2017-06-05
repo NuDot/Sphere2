@@ -1,3 +1,5 @@
+#include <cmath>
+
 #include "Sphere1PrimaryGeneratorAction.hh"
 
 #include "G4LogicalVolumeStore.hh"
@@ -56,13 +58,13 @@ Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv)
 
   if (!USE_HEPEVT_INTERFACE) {
     // default particle kinematic
-    G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
+  //G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
     G4String particleName;
     //?
 //   G4ParticleDefinition* particle = particleTable->FindParticle(particleName="e-");
 //    fParticleGun->SetParticleDefinition(particle);
 //    fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1.,0.,0.));
-    fParticleGun->SetParticleEnergy(0*MeV);
+      fParticleGun->SetParticleEnergy(0*MeV);
    // fParticleGun->SetParticleEnergy(2.529*MeV);//(0.5*2.529*MeV);
   //  fParticleGun->SetParticleEnergy((2.529-0.511*2-0.718)*MeV);
   //  fParticleGun->SetParticleEnergy(0.718*MeV);
@@ -129,7 +131,8 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   G4double z0 = -0.5 * envSizeZ;
   */
 
-  G4double r_vtx = G4UniformRand()*3000;
+  G4double r_vtx_squared = G4UniformRand()*9000000;
+  G4double r_vtx = sqrt (r_vtx_squared); 
   G4double phi_vtx = G4UniformRand()*2.0*pi-pi;
   G4double theta_vtx = acos(2.0*G4UniformRand() - 1.0);
 
@@ -173,14 +176,14 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   pEv->trueDirY = pMomentum.y();
   pEv->trueDirZ = pMomentum.z();
 
-  fParticleGun->SetParticlePosition(G4ThreeVector(0,0,0));
+  fParticleGun->SetParticlePosition(G4ThreeVector(x0,y0,z0));
   G4ThreeVector pPos =  fParticleGun->GetParticlePosition();
   pEv->trueVtxX = pPos.x()/10;
   pEv->trueVtxY = pPos.y()/10;
   pEv->trueVtxZ = pPos.z()/10;
 //  SetOptPhotonPolar(); //random polarization, here one can also enter a fixed angle or a special polarization angle distribution
   if (!USE_HEPEVT_INTERFACE) {
-    G4IonTable* ionTable = G4IonTable::GetIonTable();
+  //G4IonTable* ionTable = G4IonTable::GetIonTable();
     G4String particleName;
     //?
   //G4ParticleDefinition* ion = G4IonTable::GetIonTable()->GetIon(6,10,0);
