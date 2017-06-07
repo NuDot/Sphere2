@@ -38,6 +38,8 @@
 
 #include "EventStructure.hh"
 
+#include <string>
+
 class G4ParticleGun;
 class G4VPrimaryGenerator;
 
@@ -49,6 +51,8 @@ class Sphere1DetectorConstruction;
 ///
 /// The default kinematic is a 6 MeV gamma, randomly distribued 
 /// in front of the phantom across 80% of the (X,Y) phantom size.
+
+class Sphere1PrimaryGeneratorActionMessenger; 
 
 class Sphere1PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
@@ -68,6 +72,10 @@ class Sphere1PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     void SetOptPhotonPolar();
     void SetOptPhotonPolar(G4double angle);
   
+  public: 
+    //for the Messenger
+    void SetTrueVtx(G4String); 
+
   private:
     static Sphere1PrimaryGeneratorAction* fgInstance;
    
@@ -75,6 +83,8 @@ class Sphere1PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     G4VPrimaryGenerator* HEPEvt;
 
     event* pEv;
+
+    Sphere1PrimaryGeneratorActionMessenger* gMessenger; 
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

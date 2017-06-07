@@ -29,6 +29,7 @@
 /// \brief Implementation of the Sphere1PrimaryGeneratorAction class
 
 #include "Sphere1PrimaryGeneratorAction.hh"
+#include "Sphere1PrimaryGeneratorActionMessenger.hh"
 
 #include "G4LogicalVolumeStore.hh"
 #include "G4LogicalVolume.hh"
@@ -43,6 +44,8 @@
 #include "G4IonTable.hh"
 
 #include <cmath>
+
+std::string trueVtx; 
 
 const int USE_HEPEVT_INTERFACE = 0;
 const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
@@ -114,6 +117,7 @@ Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv)
   }
 
   fgInstance = this;
+  gMessenger = new Sphere1PrimaryGeneratorActionMessenger(this); 
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -122,10 +126,15 @@ Sphere1PrimaryGeneratorAction::~Sphere1PrimaryGeneratorAction()
 {
   delete fParticleGun;
   delete HEPEvt;
+  delete gMessenger; 
 
   fgInstance = 0;
 }
 
+void Sphere1PrimaryGeneratorAction::SetTrueVtx(G4String trueVtxName)
+{
+   trueVtx = trueVtxName; 
+}
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
@@ -166,9 +175,15 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   G4double phi_vtx = G4UniformRand()*2.0*pi-pi;
   G4double theta_vtx = acos(2.0*G4UniformRand() - 1.0);
 
-  G4double x0 = r_vtx*sin(theta_vtx)*cos(phi_vtx);
-  G4double y0 = r_vtx*sin(theta_vtx)*sin(phi_vtx);
-  G4double z0 = r_vtx*cos(theta_vtx);
+  G4double x0 = 0; 
+  G4double y0 = 0; 
+  G4double z0 = 0; 
+
+  if ( trueVtx.compare("rand") == 0 ) {
+     x0 = r_vtx*sin(theta_vtx)*cos(phi_vtx);
+     y0 = r_vtx*sin(theta_vtx)*sin(phi_vtx);
+     z0 = r_vtx*cos(theta_vtx);
+  }
 
  // G4double x0 = 0.0;//r_vtx*sin(theta_vtx)*cos(phi_vtx);
  // G4double y0 = 0.0;//r_vtx*sin(theta_vtx)*sin(phi_vtx);
