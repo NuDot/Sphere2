@@ -1,13 +1,26 @@
+#include "globals.hh"
 #include "Sphere1TrackingAction.hh"
+#include "Sphere1TrackingActionMessenger.hh"
 #include "G4TrackingManager.hh"
 #include "G4Track.hh"
 #include "G4UnitsTable.hh"
+#include <string>
+
+std::string ion; 
 
 Sphere1TrackingAction::Sphere1TrackingAction(event* fEv)
 {
 //  tTree = fTree1;
 //  tTree2 = fTree2;
    tEv = fEv;
+   tMessenger = new Sphere1TrackingActionMessenger(this); 
+}
+
+Sphere1TrackingAction::~Sphere1TrackingAction() { delete tMessenger;} 
+
+void Sphere1TrackingAction::SetKillIon(G4String ionName)
+{
+   ion = ionName; 
 }
  
 void Sphere1TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
@@ -34,7 +47,7 @@ void Sphere1TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
 				  aTrack->GetVertexPosition().getZ()*aTrack->GetVertexPosition().getZ() )<<G4endl;
   }
 
-  if((aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName())=="Po214")
+  if((aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName()).compare(ion)==0)
   {
     G4Track* bTrack; 
     bTrack = (G4Track*)aTrack; 
@@ -43,7 +56,7 @@ void Sphere1TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
 
   if((aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName())=="C10")
   {
-    G4cout<<"we're in here"<<G4endl;
+//  G4cout<<"we're in here"<<G4endl;
     tEv->C10_0_ti=aTrack->GetGlobalTime();
     int prec=G4cout.precision();
     G4cout.precision(15);
@@ -54,7 +67,7 @@ void Sphere1TrackingAction::PreUserTrackingAction(const G4Track* aTrack)
   if((aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName())=="nu_e")
   {
     tEv->nue_ti=aTrack->GetGlobalTime();
-//    if(aTrack->GetDynamicParticle()->GetKineticEnergy()<0.6) 
+//  if(aTrack->GetDynamicParticle()->GetKineticEnergy()<0.6) 
     tEv->t0=tEv->nue_ti;
     int prec=G4cout.precision();
     G4cout.precision(15);
