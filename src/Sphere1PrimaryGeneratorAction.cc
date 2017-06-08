@@ -206,9 +206,13 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 //  G4double x0 = G4UniformRand()*2*2600-2600;// 4500.;//-6500.000;
 //  G4double y0 = G4UniformRand()*2*2600-2600;// 0.;
 //  G4double z0 = G4UniformRand()*2*2600-2600;// 0.;
-  pEv->trueVtxX = x0/10;
-  pEv->trueVtxY = y0/10;
-  pEv->trueVtxZ = z0/10;
+//  pEv->trueVtxX = x0/10;
+//  pEv->trueVtxY = y0/10;
+//  pEv->trueVtxZ = z0/10;
+
+  pEv->trueVtxX = x0;
+  pEv->trueVtxY = y0;
+  pEv->trueVtxZ = z0;
 
 
   // Particle Gun
@@ -237,9 +241,14 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 
   fParticleGun->SetParticlePosition(G4ThreeVector(x0,y0,z0));
   G4ThreeVector pPos =  fParticleGun->GetParticlePosition();
-  pEv->trueVtxX = pPos.x()/10;
-  pEv->trueVtxY = pPos.y()/10;
-  pEv->trueVtxZ = pPos.z()/10;
+
+//  pEv->trueVtxX = pPos.x()/10;
+//  pEv->trueVtxY = pPos.y()/10;
+//  pEv->trueVtxZ = pPos.z()/10;
+
+  pEv->trueVtxX = pPos.x();
+  pEv->trueVtxY = pPos.y();
+  pEv->trueVtxZ = pPos.z();
 //  SetOptPhotonPolar(); //random polarization, here one can also enter a fixed angle or a special polarization angle distribution
   if (!USE_HEPEVT_INTERFACE) {
   //G4IonTable* ionTable = G4IonTable::GetIonTable();
