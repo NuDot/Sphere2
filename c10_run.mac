@@ -31,6 +31,7 @@
 /gun/particle ion
 /gun/ion 6 10
 
+#In command below, rand makes all decay events isotropic, and anything else makes them centered. 
 /Sphere1/gen/setTrueVtx rand
 
 /run/beamOn 1000

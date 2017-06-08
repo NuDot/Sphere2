@@ -46,9 +46,21 @@
 #include <cmath>
 
 std::string trueVtx; 
+std::string neutrinos; 
 
-const int USE_HEPEVT_INTERFACE = 0;
-const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
+void Sphere1PrimaryGeneratorAction::SetTrueVtx(G4String trueVtxName)
+{
+   trueVtx = trueVtxName;
+}
+
+void Sphere1PrimaryGeneratorAction::SetNeutrinos(G4String neutrinosName)
+{
+   neutrinos = neutrinosName;
+}
+
+int USE_HEPEVT_INTERFACE = 0; 
+const char* HEPEVT_FILE = "/mnt/disk0/kamland/sphereical_data/Te130_2vbb_1e6.EVT";
+
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p7MeV_pos_0p718MeV_gamma_1k.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_pxpx_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Se_0vbb_1e6.EVT";
@@ -72,6 +84,7 @@ Sphere1PrimaryGeneratorAction* Sphere1PrimaryGeneratorAction::fgInstance = 0;
 
 const Sphere1PrimaryGeneratorAction* Sphere1PrimaryGeneratorAction::Instance()
 {
+
 // Static acces function via G4RunManager 
 
   return fgInstance;
@@ -118,6 +131,11 @@ Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv)
 
   fgInstance = this;
   gMessenger = new Sphere1PrimaryGeneratorActionMessenger(this); 
+  if( neutrinos.compare("neutrinoless") == 0 ) {
+     USE_HEPEVT_INTERFACE = 1;
+     HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Te130_0vbb_1e6.EVT";
+  }
+
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -131,10 +149,6 @@ Sphere1PrimaryGeneratorAction::~Sphere1PrimaryGeneratorAction()
   fgInstance = 0;
 }
 
-void Sphere1PrimaryGeneratorAction::SetTrueVtx(G4String trueVtxName)
-{
-   trueVtx = trueVtxName; 
-}
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
@@ -184,7 +198,7 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
      y0 = r_vtx*sin(theta_vtx)*sin(phi_vtx);
      z0 = r_vtx*cos(theta_vtx);
   }
-
+  
  // G4double x0 = 0.0;//r_vtx*sin(theta_vtx)*cos(phi_vtx);
  // G4double y0 = 0.0;//r_vtx*sin(theta_vtx)*sin(phi_vtx);
  // G4double z0 = 0.0;//r_vtx*cos(theta_vtx);
