@@ -59,7 +59,7 @@ void Sphere1PrimaryGeneratorAction::SetNeutrinos(G4String neutrinosName)
 }
 
 int USE_HEPEVT_INTERFACE = 0; 
-const char* HEPEVT_FILE = "/mnt/disk0/kamland/sphereical_data/Te130_2vbb_1e6.EVT";
+const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
 
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p7MeV_pos_0p718MeV_gamma_1k.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_pxpx_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
