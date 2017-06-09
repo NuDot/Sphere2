@@ -46,17 +46,17 @@
 #include <cmath>
 
 std::string trueVtx; 
-std::string neutrinos; 
+//std::string neutrinos; 
 
 void Sphere1PrimaryGeneratorAction::SetTrueVtx(G4String trueVtxName)
 {
    trueVtx = trueVtxName;
 }
 
-void Sphere1PrimaryGeneratorAction::SetNeutrinos(G4String neutrinosName)
-{
-   neutrinos = neutrinosName;
-}
+//void Sphere1PrimaryGeneratorAction::SetNeutrinos(G4String neutrinosName)
+//{
+  // neutrinos = neutrinosName;
+//}
 
 int USE_HEPEVT_INTERFACE = 0; 
 const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
@@ -131,10 +131,10 @@ Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv)
 
   fgInstance = this;
   gMessenger = new Sphere1PrimaryGeneratorActionMessenger(this); 
-  if( neutrinos.compare("neutrinoless") == 0 ) {
-     USE_HEPEVT_INTERFACE = 1;
-     HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Te130_0vbb_1e6.EVT";
-  }
+  //if( neutrinos.compare("neutrinoless") == 0 ) {
+    // USE_HEPEVT_INTERFACE = 1;
+     //HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Te130_0vbb_1e6.EVT";
+//  }
 
 }
 

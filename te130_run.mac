@@ -32,7 +32,7 @@
 /Sphere1/gen/setTrueVtx rand
 
 #In command below, neutrinoless makes double beta decay neutrinoless, and anything else makes it have two neutrinos. 
-/Sphere1/gen/setNeutrinos neutrinoless
+#/Sphere1/gen/setNeutrinos neutrinoless
 
 /gun/particle ion
 /gun/ion 52 130

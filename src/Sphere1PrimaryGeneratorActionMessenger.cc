@@ -18,8 +18,8 @@ Sphere1PrimaryGeneratorActionMessenger::Sphere1PrimaryGeneratorActionMessenger(S
   vtxCmd = new G4UIcmdWithAString("/Sphere1/gen/setTrueVtx", this);
   vtxCmd->SetGuidance("set whether decay events are centered or isotropic");
 
-  nuCmd = new G4UIcmdWithAString("/Sphere1/gen/setNeutrinos", this); 
-  nuCmd->SetGuidance("set whether double beta decays are neutrinoless or not"); 
+  //nuCmd = new G4UIcmdWithAString("/Sphere1/gen/setNeutrinos", this); 
+  //nuCmd->SetGuidance("set whether double beta decays are neutrinoless or not"); 
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -27,7 +27,7 @@ Sphere1PrimaryGeneratorActionMessenger::Sphere1PrimaryGeneratorActionMessenger(S
 Sphere1PrimaryGeneratorActionMessenger::~Sphere1PrimaryGeneratorActionMessenger()
 {
   delete vtxCmd;
-  delete nuCmd; 
+  //delete nuCmd; 
   delete genDir;
   delete Sphere1Dir;
 }
@@ -40,9 +40,9 @@ void Sphere1PrimaryGeneratorActionMessenger::SetNewValue(G4UIcommand* command,
   if( command == vtxCmd ){
     {gPrimaryGeneratorAction->SetTrueVtx(newValue);}
   }
-  if( command == nuCmd ){ 
-    {gPrimaryGeneratorAction->SetNeutrinos(newValue);}
-  }
+  //if( command == nuCmd ){ 
+    //{gPrimaryGeneratorAction->SetNeutrinos(newValue);}
+//  }
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
