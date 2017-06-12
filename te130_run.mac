@@ -29,13 +29,15 @@
 #/gun/energy 1.54975*1e-06 MeV
 
 #In command below, rand makes all decay events isotropic, and anything else makes them centered. 
-/Sphere1/gen/setTrueVtx rand
+/Sphere1/gen/setTrueVtx cent
 
-#In command below, neutrinoless makes double beta decay neutrinoless, and anything else makes it have two neutrinos. 
-#/Sphere1/gen/setNeutrinos neutrinoless
+#In command below, use "neutrinoless" to indicate 0vBB decay and any other command otherwise (e.g. "neutrinos"). 
+#MUST HAVE THIS COMMAND TO HAVE OUTPUT WITH SOME VERBOSITY.
+/Sphere1/gen/setNeutrinos neutrinos
+
 
 /gun/particle ion
 /gun/ion 52 130
 
-/run/beamOn 50
+/run/beamOn 10
 

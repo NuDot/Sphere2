@@ -46,24 +46,32 @@
 #include <cmath>
 
 std::string trueVtx; 
-//std::string neutrinos; 
+std::string neutrinos; 
 
+int USE_HEPEVT_INTERFACE;// = 1; 
+const char* HEPEVT_FILE;// = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p79MeV_pos_0p718MeV_gamma_1k.EVT"; 
 void Sphere1PrimaryGeneratorAction::SetTrueVtx(G4String trueVtxName)
 {
    trueVtx = trueVtxName;
 }
 
-//void Sphere1PrimaryGeneratorAction::SetNeutrinos(G4String neutrinosName)
-//{
-  // neutrinos = neutrinosName;
-//}
-
-int USE_HEPEVT_INTERFACE = 0; 
-const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
+void Sphere1PrimaryGeneratorAction::SetNeutrinos(G4String neutrinosName)
+{
+   neutrinos = neutrinosName; 
+   if( neutrinos.compare("neutrinoless") == 0 ) {
+     USE_HEPEVT_INTERFACE = 1;
+     HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Te130_0vbb_1e6.EVT";
+   }
+   else {
+     USE_HEPEVT_INTERFACE = 0;
+     HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p79MeV_pos_0p718MeV_gamma_1k.EVT"; 
+   }
+ 
+}
 
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p7MeV_pos_0p718MeV_gamma_1k.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_pxpx_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
-//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Se_0vbb_1e6.EVT";
+//const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Se82_0vbb_1e6.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Te130_0vbb_1e6.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology0_pxpx_100p0MeVEach_1k.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/topology0_pxpx_10p0MeVEach_1k.EVT";
@@ -121,21 +129,17 @@ Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv)
   //?
   }
   
-
+  /*
   if (USE_HEPEVT_INTERFACE) {
     //or alternatively use HEPEvt interface
-
     G4cout<<"INPUT_FILE = "<<HEPEVT_FILE<<G4endl;
+    G4cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"<<G4endl;   
     HEPEvt = new G4HEPEvtInterface(HEPEVT_FILE);
   }
+  */
 
   fgInstance = this;
   gMessenger = new Sphere1PrimaryGeneratorActionMessenger(this); 
-  //if( neutrinos.compare("neutrinoless") == 0 ) {
-    // USE_HEPEVT_INTERFACE = 1;
-     //HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Te130_0vbb_1e6.EVT";
-//  }
-
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -250,6 +254,9 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   pEv->trueVtxY = pPos.y();
   pEv->trueVtxZ = pPos.z();
 //  SetOptPhotonPolar(); //random polarization, here one can also enter a fixed angle or a special polarization angle distribution
+  G4cout<<USE_HEPEVT_INTERFACE<<G4endl;
+  G4cout<<HEPEVT_FILE<<G4endl;
+  //G4cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"<<G4endl;
   if (!USE_HEPEVT_INTERFACE) {
   //G4IonTable* ionTable = G4IonTable::GetIonTable();
     G4String particleName;
@@ -261,6 +268,7 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
     fParticleGun->SetParticleCharge(0.);
    // fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,0.));
     fParticleGun->GeneratePrimaryVertex(anEvent); //!!!!!Don't comment this twice in Gun mode!!!!!!!!!!1
+    G4cout<<"NO HEPEVT INTERFACE"<<G4endl;
    }
 
 /*
@@ -275,14 +283,19 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 
   //fParticleGun->GeneratePrimaryVertex(anEvent); //!!!!!Don't comment this twice in Gun mode!!!!!!!!!!
 
-  if (USE_HEPEVT_INTERFACE) {
+  else if (USE_HEPEVT_INTERFACE) {
+    G4cout<<"INPUT_FILE = "<<HEPEVT_FILE<<G4endl;
+    HEPEvt = new G4HEPEvtInterface(HEPEVT_FILE);
     //HEPEvt generator
     //?
-    //HEPEvt->SetParticlePosition(G4ThreeVector(2500.*mm,2500.*mm,2500.*mm));
+//    HEPEvt->SetParticlePosition(G4ThreeVector(2500.*mm,2500.*mm,2500.*mm));
     HEPEvt->SetParticlePosition(G4ThreeVector(x0,y0,z0));
     HEPEvt->GeneratePrimaryVertex(anEvent);
-  }
-
+ }
+  else { 
+    fParticleGun->SetParticleCharge(0.);
+    fParticleGun->GeneratePrimaryVertex(anEvent);
+ }
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

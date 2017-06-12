@@ -75,10 +75,13 @@ class Sphere1PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
   public: 
     //for the Messenger
     void SetTrueVtx(G4String); 
-    //void SetNeutrinos(G4String); 
+    void SetNeutrinos(G4String); 
   private:
     static Sphere1PrimaryGeneratorAction* fgInstance;
-   
+    
+//    int USE_HEPEVT_INTERFACE = 1; 
+//    const char* HEPEVT_FILE; 
+       
     G4ParticleGun*  fParticleGun; // pointer a to G4 gun class
     G4VPrimaryGenerator* HEPEvt;
 

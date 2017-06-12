@@ -25,7 +25,7 @@ class Sphere1PrimaryGeneratorActionMessenger: public G4UImessenger
     G4UIdirectory*        Sphere1Dir;
     G4UIdirectory*        genDir;
     G4UIcmdWithAString*   vtxCmd;
-//    G4UIcmdWithAString*   nuCmd; 
+    G4UIcmdWithAString*   nuCmd; 
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
