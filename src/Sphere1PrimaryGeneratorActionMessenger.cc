@@ -19,7 +19,7 @@ Sphere1PrimaryGeneratorActionMessenger::Sphere1PrimaryGeneratorActionMessenger(S
   vtxCmd->SetGuidance("set whether decay events are centered or isotropic");
 
   nuCmd = new G4UIcmdWithAString("/Sphere1/gen/setNeutrinos", this); 
-  nuCmd->SetGuidance("set whether double beta decays are neutrinoless or not"); 
+  nuCmd->SetGuidance("set whether decays are double beta (and two-neutrino/neutrinoless within double beta)"); 
   nuCmd->SetDefaultValue("neutrinos"); 
 }
 

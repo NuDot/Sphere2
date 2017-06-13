@@ -33,11 +33,11 @@
 
 #In command below, use "neutrinoless" to indicate 0vBB decay and any other command otherwise (e.g. "neutrinos"). 
 #MUST HAVE THIS COMMAND TO HAVE OUTPUT WITH SOME VERBOSITY.
-/Sphere1/gen/setNeutrinos neutrinos
+/Sphere1/gen/setNeutrinos twoneutrino
 
 
 /gun/particle ion
 /gun/ion 52 130
 
-/run/beamOn 10
+/run/beamOn 1000
 
