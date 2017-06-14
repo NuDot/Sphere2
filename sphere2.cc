@@ -74,11 +74,17 @@ int main(int argc,char** argv)
   //f = TFile::Open("sph_out_bkgC10_rndVtx_3p0mSphere_1.root", "recreate");
 //  f = TFile::Open("sph_out_promptC10_2p529MeV_center_5.root", "recreate");
 //  f = TFile::Open("sph_out_1gamma_0p718MeV_center_1k_test3.root", "recreate");
-  if (argc > 2) { 
-    f = TFile::Open(argv[2],"recreate");
+  std::string OUTPUT_FILE(argv[2]); 
+  if (argc > 2)  { 
+    if (OUTPUT_FILE == "default") { 
+       f = TFile::Open("/mnt/disk0/kamland/myunus/test.root", "recreate");
+    }
+    else{  
+       f = TFile::Open(argv[2],"recreate");
+    }
   }
   else { 
-    f = TFile::Open("/mnt/disk0/kamland/myunus/test.root", "recreate"); 
+    f = TFile::Open("/mnt/disk0/kamland/myunus/test.root", "recreate");
   }
 //    f = TFile::Open("sph_out_topology180_center_NoMultScat_100.root", "recreate");
   TTree* epgTree = new TTree("epgTree", "epgTree");
@@ -208,7 +214,12 @@ int main(int argc,char** argv)
   runManager->SetUserInitialization(physicsList);
     
   // Primary generator action
-  runManager->SetUserAction(new Sphere1PrimaryGeneratorAction(&Ev));
+  if (argc > 3) { 
+    runManager->SetUserAction(new Sphere1PrimaryGeneratorAction(&Ev, std::stoi(argv[3])));
+  }
+  else { 
+    runManager->SetUserAction(new Sphere1PrimaryGeneratorAction(&Ev, 1)); 
+  } 
 
   // Set user action classes
   //

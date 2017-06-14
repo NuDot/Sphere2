@@ -57,7 +57,7 @@ class Sphere1PrimaryGeneratorActionMessenger;
 class Sphere1PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
   public:
-    Sphere1PrimaryGeneratorAction(event*);    
+    Sphere1PrimaryGeneratorAction(event*, int);    
     virtual ~Sphere1PrimaryGeneratorAction();
 
     // static access method
@@ -75,7 +75,6 @@ class Sphere1PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
   public: 
     //for the Messenger
     void SetTrueVtx(G4String); 
-    void SetNeutrinos(G4String); 
   private:
     static Sphere1PrimaryGeneratorAction* fgInstance;
     

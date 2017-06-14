@@ -46,7 +46,6 @@
 #include <cmath>
 
 std::string trueVtx; 
-std::string neutrinos; 
 
 int USE_HEPEVT_INTERFACE;// = 1; 
 const char* HEPEVT_FILE;// = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p79MeV_pos_0p718MeV_gamma_1k.EVT"; 
@@ -55,22 +54,6 @@ void Sphere1PrimaryGeneratorAction::SetTrueVtx(G4String trueVtxName)
    trueVtx = trueVtxName;
 }
 
-void Sphere1PrimaryGeneratorAction::SetNeutrinos(G4String neutrinosName)
-{
-   neutrinos = neutrinosName; 
-   if( neutrinos.compare("neutrinoless") == 0 ) {
-     USE_HEPEVT_INTERFACE = 1;
-     HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Te130_0vbb_1e6.EVT";
-   }
-   else if( neutrinos.compare("twoneutrino") == 0) { 
-     USE_HEPEVT_INTERFACE = 1; 
-     HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Te130_2vbb_1e6.EVT"; 
-   }
-   else {
-     USE_HEPEVT_INTERFACE = 0;
-   }
- 
-}
 
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_0p7MeV_pos_0p718MeV_gamma_1k.EVT";
 //const char* HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/C10_prompt_pxpx_0p79MeV_pos_0p718MeV_gamma_1k.EVT";
@@ -103,11 +86,22 @@ const Sphere1PrimaryGeneratorAction* Sphere1PrimaryGeneratorAction::Instance()
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv)
+Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv, int neutrinos)
 : G4VUserPrimaryGeneratorAction()//,
 //  fParticleGun(0)
 {
-  pEv = fEv;
+   pEv = fEv;
+   if( neutrinos == 0 ) {
+     USE_HEPEVT_INTERFACE = 1;
+     HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Te130_0vbb_1e6.EVT";
+   }
+   else if( neutrinos == 2 ) { 
+     USE_HEPEVT_INTERFACE = 1; 
+     HEPEVT_FILE = "/mnt/disk0/kamland/spherical_data/Te130_2vbb_1e6.EVT"; 
+   }
+   else {
+     USE_HEPEVT_INTERFACE = 0;
+   } 
 
   //use particle gun
   G4int n_particle = 1;
@@ -131,15 +125,13 @@ Sphere1PrimaryGeneratorAction::Sphere1PrimaryGeneratorAction(event* fEv)
     //fParticleGun->SetParticleEnergy(3.03798*1e-06*MeV); //optical photon energy @ 392.6nm: 3.1579*1e-06*MeV
   //?
   }
-  
-  /*
+
   if (USE_HEPEVT_INTERFACE) {
     //or alternatively use HEPEvt interface
     G4cout<<"INPUT_FILE = "<<HEPEVT_FILE<<G4endl;
-    G4cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"<<G4endl;   
     HEPEvt = new G4HEPEvtInterface(HEPEVT_FILE);
   }
-  */
+
 
   fgInstance = this;
   gMessenger = new Sphere1PrimaryGeneratorActionMessenger(this); 
@@ -287,7 +279,6 @@ void Sphere1PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 
   else if (USE_HEPEVT_INTERFACE) {
     G4cout<<"INPUT_FILE = "<<HEPEVT_FILE<<G4endl;
-    HEPEvt = new G4HEPEvtInterface(HEPEVT_FILE);
     //HEPEvt generator
     //?
 //    HEPEvt->SetParticlePosition(G4ThreeVector(2500.*mm,2500.*mm,2500.*mm));
