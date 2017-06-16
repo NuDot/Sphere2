@@ -15,13 +15,17 @@ for( int n_entry = 0; n_entry < 100; n_entry++ ) {
   TVector3 vec1, vec2; 
   for( int particle = 0; particle < 500000; particle++ ) {
     if( track[particle] == 1 ) { 
+      std::cout<<"Particle 1 Momentum: "<<px[particle]<<"   "<<py[particle]<<"   "<<pz[particle]<<std::endl; 
       vec1 = TVector3(px[particle], py[particle], pz[particle]); 
+//      std::cout<<"TRACKING NUMBER 1 FOUND"<<std::endl; 
     }
     else if( track[particle] == 2 ) {
+      std::cout<<"Particle 2 Momentum: "<<px[particle]<<"   "<<py[particle]<<"   "<<pz[particle]<<std::endl;
       vec2 = TVector3(px[particle], py[particle], pz[particle]);
+//      std::cout<<"TRACKING NUMBER 2 FOUND"<<std::endl;
     }
   }
-  std::cout<<"THETA: "<<vec1.Angle(vec2)<<std::endl; 
+  std::cout<<"Angle Between Particles 1 and 2: "<<vec1.Angle(vec2)<<std::endl; 
 }
 
 }
