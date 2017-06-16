@@ -43,5 +43,5 @@
 /gun/particle ion
 /gun/ion 52 130
 
-/run/beamOn 1000
+/run/beamOn 100
 
